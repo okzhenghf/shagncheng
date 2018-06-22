@@ -1,0 +1,79 @@
+<view hidden='{{bj_show}}'>
+    <view class="info_">
+  <view class='info_item'>
+    <text class='zhi_'>收货人</text>
+    <input type='text' placeholder='姓名' value='{{true_name}}' bindinput='set_name' placeholder-class='d'></input>
+  </view>
+
+  <view class='info_item'>
+    <text class='zhi_'>手机号码</text>
+    <input type='text' placeholder-class='d' value='{{mob_phone}}' bindinput='set_phone' placeholder='11位手机号'></input>
+  </view>
+
+  <view class='info_item' bindtap='show_sheng'>
+    <text class='zhi_'>地区信息</text>
+
+
+
+
+    
+      <input disabled="{{true}}" type='text' placeholder-class='d' class="picker" value='{{region}}' placeholder='请选择'></input>
+    
+
+  </view>
+
+
+  <view class='info_item'>
+    <text class='zhi_'>详细地址</text>
+    <input type='text' placeholder-class='d' value='{{address}}' bindinput='set_hao' placeholder='街道门牌信息'></input>
+  </view>
+
+
+  <view class='info_item'>
+    <text class='zhi_'>邮政编码</text>
+    <input type='text' placeholder-class='d' value='{{zipcode}}' bindinput='set_code' placeholder='邮政编码'></input>
+  </view>
+</view>
+
+<view class='btn b' bindtap='submit_'>
+  保存
+</view>
+
+</view>
+
+  <!-- 地区选择 -->
+    <!-- 省 -->
+<view wx:if="{{sheng_show}}">
+  <view class='head_c' bindtap='close_'>关闭</view>
+  <view class='nctouch-default-list'>
+    <view class='li' wx:for="{{sheng_arr}}"  data-area_id='{{item.province_id}}' data-area_name='{{item.province_name}}'  bindtap='sheng_cl'>
+      <view class='h4' data-area_id='{{item.province_id}}' data-area_name='{{item.province_name}}'   bindtap='sheng_cl'>{{item.province_name}}</view>
+      <image src='../../../images/arrow_right_b.png'  data-area_id='{{item.province_id}}' data-area_name='{{item.province_name}}'   bindtap='sheng_cl'></image>
+    </view>
+  </view>
+</view>
+
+    <!-- 市 -->
+<view wx:if="{{shi_show}}">
+  <view class='head_c' bindtap='close_'>关闭</view>
+  <view class='nctouch-default-list'>
+    <view class='li' wx:for="{{shi_arr}}"  data-area_id='{{item.city_id}}' data-area_name='{{item.city_name}}'  bindtap='shi_cl'>
+      <view class='h4' data-area_id='{{item.city_id}}' data-area_name='{{item.city_name}}'   bindtap='shi_cl'>{{item.city_name}}</view>
+      <image src='../../../images/arrow_right_b.png'  data-area_id='{{item.city_id}}' data-area_name='{{item.city_name}}'   bindtap='shi_cl'></image>
+    </view>
+  </view>
+</view>
+
+
+    <!-- 区 -->
+<view wx:if="{{qu_show}}">
+  <view class='head_c' bindtap='close_'>关闭</view>
+  <view class='nctouch-default-list'>
+    <view class='li' wx:for="{{qu_arr}}"  data-area_id='{{item.district_id}}'data-area_name='{{item.district_name}}'   bindtap='qu_cl'>
+      <view class='h4' data-area_id='{{item.district_id}}' data-area_name='{{item.district_name}}'   bindtap='qu_cl'>{{item.district_name}}</view>
+      <image src='../../../images/arrow_right_b.png' data-area_name='{{item.district_name}}'   data-area_id='{{item.district_id}}'  bindtap='qu_cl'></image>
+    </view>
+  </view>
+</view>
+
+

@@ -1,0 +1,59 @@
+.btn{
+  width: 90%;
+  height: 95rpx;
+  text-align: center;
+  line-height: 95rpx;
+  font-size: 34rpx;
+  margin: 0 auto;
+  color:#fff;
+  background-color:#fa4e51!important;
+  border-radius: 8rpx;
+}
+.z{
+   color: #fa4e51!important;
+}
+.b{
+  background-color:#fa4e51!important; 
+}
+.ZPay_info{
+
+  padding: 20rpx;
+  font-size: 31rpx;
+  margin-bottom: 40rpx;
+}
+.ZPay_info text{
+  font-size: 60rpx;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

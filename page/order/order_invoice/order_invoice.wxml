@@ -1,0 +1,85 @@
+<view class="p_hmarg">
+<view class='piao_head'>
+  <view>类型和抬头</view>
+  <view class='z'>温馨提示：发票的开票金额不包括使用优惠券支付部分</view>
+</view>
+
+<view class='tit'>开据方式</view>
+<view class='sel-con'>
+<view class='inv_style   {{need_invi==false? "cur":""}}' bindtap='no_need_invi' >不需要发票</view>
+<view class='inv_style {{need_invi==true? "cur":""}}' bindtap='_need_invi'>需要发票(纸制) </view>
+
+</view>
+</view>
+
+
+<!-- 需要发票展示 -->
+<view wx:if="{{need_invi}}">
+<view class='piao_'>
+<view class='bge'></view>
+<view class='invoiceNew'>
+<!-- <text class='i_yuan'  hidden='{{true}}'></text> -->
+ <!-- <icon type="success" color="#fa4e51"></icon>  -->
+<text class='zi_'>新增发票内容 :</text>
+</view>
+</view>
+
+
+<!-- 发票类型 -->
+<view class='invoice_Type'>
+  <view class='type_titl'>发票类型</view>
+  <view class='btn_style'>
+    <view class='{{invoice_Type==false? "cur":""}}' bindtap='ge'>个人</view>
+    <view class='{{invoice_Type==true? "cur":""}}' bindtap='dw'>单位</view>
+  </view>
+</view>
+
+
+
+<!-- 选择个人时展示 -->
+<view class='invoice_Type' wx-if="{{invoice_Type==false}}">
+  <view class='type_titl'>发票内容</view>
+  <view class='sel_style'>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      {{array[index]}}
+    </view>
+  </picker>
+  </view>
+  <image src='../../../images/arrow_down_b.png' mode='widthFix'></image>
+</view>
+
+
+
+
+<!-- 单位时展示 -->
+<view  wx-if="{{invoice_Type}}">
+
+<view class='info_item'>
+      <text class='zhi_'>发票抬头</text>
+      <input type='text' placeholder='输入企业或个人名称' placeholder-class='d'></input>
+</view>
+<view class='info_item'>
+      <text class='zhi_'>纳税人识</text>
+      <input type='text' placeholder='输入纳税人识别号' placeholder-class='d'></input>
+</view>
+
+<view class='invoice_Type' >
+  <view class='type_titl'>发票内容</view>
+  <view class='sel_style'>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      {{array[index]}}
+    </view>
+  </picker>
+  </view>
+  <image src='../../../images/arrow_down_b.png' mode='widthFix'></image>
+</view>
+</view>
+
+</view>
+
+
+
+
+<view class='btn b'>确定</view>

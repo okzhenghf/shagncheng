@@ -1,0 +1,244 @@
+.z{
+   color: #fa4e51!important;
+}
+.b{
+  background-color:#fa4e51!important; 
+}
+ button{
+  background-color:rgba(250,78,81,0); 
+  border: none;
+  border-color: rgba(250,78,81,0);
+  margin: 0;
+  display: inline-block;
+} 
+button:after {
+  border: 0;
+} 
+.member-top{
+    /* background-color: #f3f3f3; */
+    text-align: center;
+    width: 100%;
+    height: 550rpx;
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid #fff;
+      background-color:rgba(250,78,81,0.6); 
+}
+.member-info{
+    height:300rpx;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    margin: 0;
+    top: 37%;
+    transform: translate(-50%,-50%);
+    left: 50%;
+}
+.user-avatar{
+      background-color: #FFF;
+    width: 200rpx;
+    height: 200rpx;
+    margin: 0 auto;
+    border-radius: 100%;
+}
+.user-name{
+  margin-top: 20rpx;
+}
+.user-avatar image{
+      width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+.user-name{
+      font-weight: lighter;
+    font-size: 44rpx;
+    line-height: 60rpx;
+    height: 60rpx;
+    position: relative;
+    z-index: 1;
+    color: #FFF;
+}
+.member-collect{
+ 
+    height: 150rpx;
+    background: rgba(0,0,0,0.1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.collect_item{
+    display: inline-block;
+    width: 50%;
+    height: 100rpx;
+    padding: 25rpx 0;
+}
+
+.member-collect navigator{
+  display: block;
+
+
+}
+.member-collect text {
+    font-weight: lighter;
+    font-size: 45rpx;
+    color: #FFF;
+    line-height: 50rpx;
+    text-align: center;
+    vertical-align: top;
+    display: inline-block;
+    min-width: 50rpx;
+    height: 50rpx;
+    margin: 0 auto;
+}
+
+
+
+.collect_item view {
+    font-size: 30rpx;
+    line-height: 50rpx;
+    color: #FFF;
+    height: 50rpx;
+}
+
+
+
+  .mt5 {
+    margin-top: 25rpx !important;
+}
+
+.member-center>view{
+  background-color: #FFF;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+}
+.me_item .me_top{
+  height: 75rpx;
+    padding-top:50rpx;
+    line-height: 45rpx;
+    display: block;
+    padding: 25rpx 35rpx 25rpx 0;
+    margin-left: 25rpx;
+    border-bottom: solid 3rpx #EEE;
+}
+
+.me_top a {
+    display: block;
+}
+.me_left{
+      font-size: 35rpx;
+    line-height: 50rpx;
+    color: #111;
+    vertical-align: top;
+    display: inline-block;
+    height: 50rpx;
+}
+
+.me_left image{
+
+vertical-align: top;
+    display: inline-block;
+    width:50rpx;
+    height: 50rpx;
+    margin-right: 5rpx;
+    
+}
+.me_right{
+  font-size: 30rpx;
+    color: #999;
+    float: right;
+    line-height:50rpx;
+}
+.r_icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 35rpx;
+    height: 35rpx;
+    opacity: 0.4;
+}
+
+.me_bottom{
+  display: block;
+    padding: 10rpx 0;
+}
+.order_item{
+      vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 20%;
+    padding: 25rpx 0 10rpx 0;
+}
+
+.order_item navigator{
+  display: block;
+    position: relative;
+}
+.order_item image{
+      vertical-align: top;
+    display: inline-block;
+    width: 50rpx;
+    height: 50rpx;
+    margin: 0 auto 5rpx auto;
+    opacity: 0.5;
+}
+
+.order_item view{
+      font-size: 28rpx;
+    color: #888;
+    line-height: 50rpx;
+    height: 50rpx;
+}
+.item_:last-child{
+    border-bottom: none;
+}
+.item_{
+    height: 75rpx;
+    padding-top: 50rpx;
+      line-height: 45rpx;
+    display: block;
+    padding:25rpx 35rpx 25rpx 0;
+    margin-left: 25rpx;
+    border-bottom: solid 3rpx #EEE;
+}
+.item_ navigator{
+      display: block;
+      margin-top: 15rpx;
+}
+
+
+.me_item{
+    border-top: solid 3rpx #EEE;
+  
+}
+
+.me_item:last-child{
+  margin-bottom: 20rpx;
+}
+.me_top navigator{
+  margin-top: 15rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

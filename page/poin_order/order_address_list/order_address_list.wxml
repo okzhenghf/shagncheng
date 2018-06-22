@@ -1,0 +1,44 @@
+<view class="address_list">
+
+<view class='address_item' bindtap='set_address' bindlongpress='show_list'>
+<view class='mo z'>默认</view>
+<view class='it_top'>
+  <text>赵佳宇</text>,
+  <text>15086310465</text>
+</view>
+<view class='it_bottom'>
+    <text>贵州省 毕节市 七星关区</text>  
+    <text>详细地址</text>
+</view>
+</view>
+
+
+</view>
+<!-- 添加地址 -->
+
+<view class='add_address b'>
+<navigator url='../order_address_add/order_address_add'>新增收货地址</navigator>
+</view>
+
+<!-- 遮罩层 -->
+<view class='zhe' catchtap='zh'  hidden='{{hidden_list}}'>
+<view class='xz'>
+<navigator url='../order_address_edit/order_address_edit'>编辑</navigator>
+<text catchtap="co">删除</text>
+</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

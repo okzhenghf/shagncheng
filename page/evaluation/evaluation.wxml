@@ -1,0 +1,50 @@
+<view wx:for="{{el_data}}"  class='vel_item {{index!=0? "mt10b":""}}' >
+<view class="item_r">
+  <view class='evaluation-info'>
+    <view class='goods-pic'>
+      <image mode='widthFix' src='{{tp+"/"+item.picture_info.pic_cover_big }}'></image>
+    </view>
+    <view class='goods-info'>
+      <view class='goods-name'>{{item.goods_name}}</view>
+    </view>
+  </view>
+  <view class='evaluation-inp-block'>
+    <view class='eval_head'><text class='z'>*</text>心得</view>
+    <textarea data-i='{{index}}' bindinput='get_area'  placeholder='商品满意吗？来分享您的使用感受吧。'></textarea>
+  </view>
+
+  <view class='evaluation-upload-block upload-item'>
+    <view class='h4'>晒图：<text>每张图片大小不超过5M，支持JPG、PNG格式，最多上传5张</text></view>
+      <view class='nctouch-upload' data-i='{{index}}' bindtap='check_image1'>
+          <image src='{{item.t1}}' data-i='{{index}}' class='{{item.t1=="../../images/value_add.png" ?"icon-upload":""}}' mode='Fixwidth'></image>
+      </view>
+      <view class='nctouch-upload' data-i='{{index}}' bindtap='check_image2'>
+          <image src='{{item.t2}}' data-i='{{index}}' class='{{item.t2=="../../images/value_add.png" ?"icon-upload":""}}' mode='Fixwidth'></image>
+      </view>
+      <view class='nctouch-upload' data-i='{{index}}' bindtap='check_image3'>
+          <image src='{{item.t3}}' data-i='{{index}}' class='{{item.t3=="../../images/value_add.png" ?"icon-upload":""}}' mode='Fixwidth'></image>
+      </view>
+      <view class='nctouch-upload' data-i='{{index}}' bindtap='check_image4'>
+          <image src='{{item.t4}}' data-i='{{index}}' class='{{item.t4=="../../images/value_add.png" ?"icon-upload":""}}' mode='Fixwidth'></image>
+      </view>
+      <view class='nctouch-upload' data-i='{{index}}' bindtap='check_image5'>
+          <image src='{{item.t5}}' data-i='{{index}}' class='{{item.t5=="../../images/value_add.png" ?"icon-upload":""}}' mode='Fixwidth'></image>
+      </view>
+  </view>
+
+</view>
+
+<view class='item_r' id='eval'>
+  <view class='goods-rate'><view class='xx z'>*</view>商品评价
+    <view class='star-level'>
+      <image mode='widthFix' data-index='1' data-i='{{index}}' bindtap='toggle_start' src=' {{item.shu>=1? "../../images/nxx.jpg":"../../images/anx_03.jpg"}}'></image>
+       <image mode='widthFix'data-index='2' data-i='{{index}}'  bindtap='toggle_start' src=' {{item.shu>=2? "../../images/nxx.jpg":"../../images/anx_03.jpg"}}'></image>
+        <image mode='widthFix' data-index='3'data-i='{{index}}'  bindtap='toggle_start' src=' {{item.shu>=3? "../../images/nxx.jpg":"../../images/anx_03.jpg"}}'></image>
+         <image mode='widthFix' data-index='4' data-i='{{index}}' bindtap='toggle_start' src=' {{item.shu>=4? "../../images/nxx.jpg":"../../images/anx_03.jpg"}}'></image>
+          <image mode='widthFix' data-index='5' data-i='{{index}}' bindtap='toggle_start' src=' {{item.shu>=5? "../../images/nxx.jpg":"../../images/anx_03.jpg"}}'></image>
+    </view>
+  </view>
+</view>
+</view>
+
+<view class='btn b' id='m_bt' bindtap='submit_'>提交</view>

@@ -1,0 +1,47 @@
+<view class="special-tips">
+  <view class=''>特别提示：退款凭证选择直接拍照或从手机相册上传图片时，请注意图片尺寸控制在1M以内，超出请压缩裁剪后再选择上传！</view>
+</view>
+<view class='form_box'>
+  <view class='form_item'>
+    <picker range="{{ly}}" bindchange="bindPickerChange">
+      <view class='h4'>投诉主题</view>
+      <view class='input-box'>
+        <input disabled='{{true}}' value='{{yy}}'></input>
+        <view class='pl_che'>请选择
+          <image src='../../images/dright_03.jpg' mode='Fixwidth'></image>
+        </view>
+      </view>
+    </picker>
+  </view>
+
+  <view class='form_item' id='text_yu'>
+    <view class='h4'>投诉内容</view>
+    <view class='input-box'>
+      <textarea placeholder='输入您要投诉的内容' bindinput="get_area"></textarea>
+
+    </view>
+  </view>
+
+  <view class='form_item upload-item'>
+    <view class='h4'>上传凭证</view>
+    <view class='input-box'>
+      <view>
+        <view class='nctouch-upload' bindtap='check_image1'>
+          <image src='{{m1}}' class='{{m1=="../../images/value_add.png"? "icon-upload":""}}' mode='Fixwidth'></image>
+        </view>
+         <view class='nctouch-upload' bindtap='check_image2'>
+          <image src='{{m2}}' class='{{m2=="../../images/value_add.png"? "icon-upload":""}}' mode='Fixwidth'></image>
+        </view>
+       
+        <view class='nctouch-upload' bindtap='check_image3'>
+          <image src='{{m3}}' class='{{m3=="../../images/value_add.png"? "icon-upload":""}}' mode='Fixwidth'></image>
+        </view>
+
+      </view>
+
+
+    </view>
+  </view>
+
+</view>
+<view class='btn b de_B' bindtap='submit_'>提交</view>

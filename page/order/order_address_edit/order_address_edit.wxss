@@ -1,0 +1,169 @@
+.z{
+   color: #fa4e51!important;
+}
+.b{
+  background-color:#fa4e51!important; 
+}
+.info_{
+
+padding: 20rpx;
+margin-bottom: 10rpx;
+
+}
+.zhi_{
+    display: inline-block;
+    width: 160rpx;
+    /* background-color: red; */
+    font-size: 34rpx;
+    margin-left: 10rpx;
+}
+.info_item input{
+   display: inline-block;
+   font-size: 34rpx;
+   vertical-align: middle;
+   /* color: #e4e4e4 */
+}
+.info_item{
+  padding: 20rpx 0 30rpx 0;
+  border-bottom: 2rpx solid #e4e4e4;
+  margin-bottom: 20rpx;
+}
+.d{
+  color: #bcbbbb;
+}
+.btn{
+  width: 90%;
+  height: 95rpx;
+  text-align: center;
+  line-height: 95rpx;
+  font-size: 34rpx;
+  margin: 0 auto;
+  color:#fff;
+  border-radius: 8rpx;
+}
+picker{
+  display: inline-block;
+}
+.distpicker {
+
+bottom:0;
+left:0;
+z-index:999;
+width:100%;
+height:560rpx;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+background-color:#fff;
+
+}
+.distpicker-btn {
+
+justify-content:space-between;
+box-sizing:border-box;
+width:100%;
+padding:0 40rpx;
+height:80rpx;
+line-height:80rpx;
+background-color:#fafafa;
+color:#586C94;
+
+}
+view,text,span,image,input,button,navigator {
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+font-size:26rpx;
+
+}
+.distpicker-sure-btn,.distpicker-cancel-btn {
+font-size:30rpx;
+
+
+}
+.distpicker-content {
+padding: 0 20rpx;
+width:100%;
+height:400rpx;
+background-color:#fff;
+
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.area-item{
+  line-height: 40px;
+  text-align: center;
+}
+.head_c{
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 32rpx;
+ 
+}
+
+.nctouch-default-list {
+    overflow: hidden;
+    padding: 0 0 0 25rpx;
+    background-color: #FFF;
+    border-top: solid 2rpx #EEE;
+    border-bottom: solid 2rpx #EEE;
+}
+.nctouch-default-list .li{
+      position: relative;
+    z-index: 1;
+    display: block;
+    clear: both;
+    overflow: hidden;
+    padding: 25rpx 0;
+    line-height: 50rpx;
+    border-top: solid 2rpx #EEE;
+}
+.nctouch-default-list .li:last-child{
+  border-top: none;
+}
+.nctouch-default-list .h4{
+      float: left;
+    margin-left: 15rpx;
+    font-size: 35rpx;
+    line-height: 50rpx;
+    color: #333;
+}
+.nctouch-default-list image{
+  position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: 25rpx;
+    display: block;
+    width: 30rpx;
+    height: 30rpx;
+    margin-top: -15rpx;
+    opacity: 0.65;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

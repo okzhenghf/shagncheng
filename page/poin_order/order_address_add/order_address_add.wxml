@@ -1,0 +1,42 @@
+<view class="info_">
+  <view class='info_item'>
+      <text class='zhi_'>收货人</text>
+      <input type='text' placeholder='姓名' placeholder-class='d'></input>
+  </view>
+
+     <view class='info_item'>
+      <text class='zhi_'>手机号码</text>
+      <input type='text' placeholder-class='d' placeholder='11位手机号'></input>
+  </view>
+
+    <view class='info_item'>
+      <text class='zhi_'>地区信息</text>
+
+      
+
+
+<picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+    <input  disabled="{{true}}" type='text' placeholder-class='d' class="picker" value='{{region}}'  placeholder='请选择'></input>
+  </picker>
+
+  </view>
+
+  
+    <view class='info_item'>
+      <text class='zhi_'>详细地址</text>
+      <input type='text' placeholder-class='d' placeholder='街道门牌信息'></input>
+  </view>
+
+  
+    <view class='info_item'>
+      <text class='zhi_'>详细地址</text>
+      <input type='text' placeholder-class='d' placeholder='邮政编码'></input>
+  </view>
+</view>
+
+<view class='btn b'>
+保存
+</view>
+
+
+<!-- 省市区 -->

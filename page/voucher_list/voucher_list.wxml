@@ -1,0 +1,157 @@
+<!-- <view class='top'>
+  <view class='header-tab'>
+    <navigator class='z' url='../voucher_list/voucher_list'>我的优惠劵</navigator>
+    <navigator class='' url='../get_voucher/get_voucher'>领取优惠券</navigator>
+  </view>
+</view> -->
+
+
+<view class='favo_head'>
+  <view>
+    <text class=' {{toggolse_vo==false?"cur z":""}}' bindtap='toggolse_you'>有效优惠券</text>
+  </view>
+  <view>
+    <text class='{{toggolse_vo==true?"cur z":""}}' bindtap='toggolse_wu'>无效优惠券</text>
+  </view>
+</view>
+
+<!-- 有效全选 -->
+<!-- <view class='ch_tab' hidden='{{toggolse_vo}}'>
+  <view class='ck_btn   {{ y_all==true? "btn_cur":""}}'  catchtap='toggle_yall'>
+    <view class='ck_cur' wx:if="{{y_all}}" catchtap='toggle_yall'></view>
+  </view>
+  <text catchtap='toggle_yall'>全选</text>
+  <text bindtap='del_y'>删除</text>
+</view> -->
+
+
+<!-- 无效全选 -->
+<!-- <view class='ch_tab' hidden='{{!toggolse_vo}}'>
+  <view class='ck_btn {{ w_all==true? "btn_cur":""}}'  catchtap='wtoggle_yall'>
+    <view class='ck_cur' wx:if="{{w_all}}" catchtap='wtoggle_yall'></view>
+  </view>
+  <text catchtap='wtoggle_yall'>全选</text>
+  <text bindtap='del_w'>删除</text>
+</view> -->
+
+
+<view class='nctouch-voucher-list'>
+  <view class='nctouch-tickets'>
+    <!-- 有效优惠卷 -->
+    <view id='you' hidden='{{toggolse_vo}}'>
+      <view class='ticket-item' wx:for="{{yong_list}}">
+        <!-- <view class='ck_juan'>
+          <view class='ck_btn   {{item.c==true? "btn_cur":""}}' catchtap="toggle_c" data-index='{{index}}'>
+            <view class='ck_cur' wx:if="{{item.c}}" catchtap="toggle_c" data-index='{{index}}'></view>
+          </view>
+        </view> -->
+        <view class='juan_info'>
+          <view class='border-left b'>
+            <view class='yuan'></view>
+            <view class='yuan'></view>
+            <view class='yuan'></view>
+            <view class='yuan'></view>
+            <view class='yuan'></view>
+            <view class='yuan'></view>
+            <view class='yuan'></view>
+          </view>
+
+          <view class='block-center'>
+            <view class='ticket-info b'>
+              <view class='dl'>
+                <view class='dt'>￥
+                  <text>{{item.money}}</text>
+                </view>
+                <view class='dd' wx:if="{{item.at_least!=0}}">满{{item.at_least}}使用</view>
+              </view>
+
+            </view>
+
+            <view class='store-info'>
+              <view class='dl'>
+                <view class='dt'>优惠卷</view>
+                <view class='dd'>
+                  <text>有效期至：{{item.end_time}}</text>
+                  <navigator open-type='switchTab' url='../categroy/categroy'>立即使用</navigator>
+                </view>
+
+              </view>
+
+              <view class='juan_bot' catchtap="toggle_z" data-index='{{index}}'>
+
+                详细信息
+                <image src='../../images/do_07.jpg' mode='widthFix' catchtap="toggle_z" data-index='{{index}}'></image>
+              </view>
+
+
+            </view>
+
+          </view>
+
+        </view>
+        <view class='bottmo_info' wx:if="{{item.z}}">单笔订单实际支付{{item.at_least}}元即可使用</view>
+
+      </view>
+
+
+    
+
+
+
+      
+    </view>
+    <!-- 有效优惠卷结束 -->
+    <view id='wu' hidden='{{!toggolse_vo}}'>
+
+      <view class='ticket-item' wx:for="{{wu_list}}">
+          <!-- <view class='ck_juan'>
+          <view class='ck_btn   {{item.c==true? "btn_cur":""}}' catchtap="toggle_c_w" data-index='{{index}}'>
+            <view class='ck_cur' wx:if="{{item.c}}" catchtap="toggle_c_w" data-index='{{index}}'></view>
+          </view>
+        </view> -->
+        <view class='juan_info'>
+          <view class='border-left b'>
+            <view class='yuan'></view>
+            <view class='yuan'></view>
+            <view class='yuan'></view>
+            <view class='yuan'></view>
+            <view class='yuan'></view>
+            <view class='yuan'></view>
+            <view class='yuan'></view>
+          </view>
+
+          <view class='block-center'>
+            <view class='ticket-info b'>
+              <image mode='widthFix' src='../../images/ticket_ysx.png' class='watermark ysy'></image>
+              <view class='dl'>
+                <view class='dt'>￥
+                  <text>{{item.money}}</text>
+                </view>
+                <view class='dd'  wx:if="{{item.at_least!=0}}">满{{item.at_least}}使用</view>
+              </view>
+
+            </view>
+
+            <view class='store-info'>
+              <view class='dl'>
+                <view class='dt'>优惠卷</view>
+                <view class='dd'>
+                  <text>有效期至：{{item.end_time}}</text>
+                  <navigator>以失效</navigator>
+                </view>
+              </view>
+              <view class='juan_bot' catchtap="toggle_z_w" data-index='{{index}}'>
+                详细信息
+                <image src='../../images/do_07.jpg' mode='widthFix' catchtap="toggle_z_w" data-index='{{index}}'></image>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='bottmo_info' wx:if="{{item.z}}">单笔订单实际支付{{item.at_least}}元即可使用</view>
+      </view>
+    </view>
+
+
+    <!-- 无效优惠卷 -->
+  </view>
+</view>

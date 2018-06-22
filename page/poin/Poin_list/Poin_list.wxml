@@ -1,0 +1,47 @@
+
+<view id="P_top">
+  <view id='P_top_l'><image src='../../../images/jfsct_03.jpg' mode='widthFix'></image>我的积分：
+  <text class='z'>{{my_poin}}</text></view>
+
+  <view id='P_top_r'>
+    <navigator url='../Poin_record/Poin_record'>查看兑换记录</navigator>
+  </view>
+</view>
+
+
+<!-- <view class="nctouch-asset-info">
+  <view class='poin_item'>
+    <view>我的积分</view>
+    <view>({{my_poin}})</view>
+  </view>
+
+  <view class='poin_item'>
+    <view>可用积分</view>
+    <view>({{my_poin}})</view>
+  </view>
+</view> -->
+<view class='ge'></view>
+<view class='nctouch-log-list'>
+  <view class='log_item' wx:for="{{data_list}}">
+    <view class='poin_des'>
+      <view>{{item.text}}</view>
+      <view>[{{item.create_time}}]</view>
+    </view>
+    <view class='num_poin z'>
+      <text wx:if="{{item.number>=0}}">+</text>{{item.number}}
+    </view>
+  </view>
+
+
+ 
+
+
+ 
+
+  
+</view>
+
+<view class='btns'>
+  <navigator url="../get_balance/get_balance" class='btn b'>兑换余额</navigator>
+  <navigator url="../Poin_record/Poin_record" class='btn b'>查看兑换记录</navigator>
+</view>

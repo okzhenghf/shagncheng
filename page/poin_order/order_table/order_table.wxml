@@ -1,0 +1,127 @@
+<!-- 收货人 -->
+<view class='nctouch-cart-add-default'>
+  <navigator id='list-address-valve' url='../../order/order_address_list/order_address_list'>
+    <image class='icon-add' src='../../../images/location_b.png'></image>
+    <view id='address_info'>
+       <view id='shou_ren' wx:if="{{has_mo}}">
+        收货人：
+        <text id='true_name'>{{address.true_name}}</text>
+        <text id='mob_phone'>{{address.mob_phone}}</text>
+      </view> 
+
+       <view id='address_' wx:if="{{has_mo}}">
+        <text>{{address.area_info}}</text>
+      </view> 
+      <view id='wei' hidden='{{has_mo}}'>您还未添加任何收回地址</view>
+      
+    </view>
+    <image class='icon-arrow' src='../../../images/arrow_right_b.png'></image>
+  </navigator>
+</view>
+
+<view class='bge'></view>
+<!-- 发票信息 -->
+
+
+
+<!-- 使用优惠卷 -->
+
+
+<!-- 商品信息 -->
+
+
+<view class='nctouch-cart-container'>
+  <view class='gin_tit'>商品信息 :</view>
+  <view class='nctouch-cart-item' wx:for="{{pgoods}}">
+    <!-- 循环商品 -->
+    <view class='buy-item'>
+      <view class='goods-pic'>
+        <navigator>
+          <image src='{{item.pgoods_image_small}}' mode='widthFix'></image>
+        </navigator>
+      </view>
+      <view class='goods-info'>
+        <view class='goods-name'>
+          <navigator>
+            {{item.pgoods_name}}
+          </navigator>
+        </view>
+        <view class='goods-type'>
+        </view>
+
+      </view>
+
+
+      <view class='goods-subtotal'>
+        <text class='goods-price'><text class='small_y'></text>{{item.pgoods_points}}积分</text>
+      </view>
+
+      <view class='goods-num'>
+        <text class='x_j'>{{item.quantity}}</text> 件
+      </view>
+
+    </view>
+
+
+
+
+
+  </view>
+
+  <view class='nctouch-cart-subtotal'>
+   
+    <view class='wl'>
+      <view class='wl_left'>积分</view>
+      <view class='wl_right'>
+        <text>{{total_poin}}</text>
+      </view>
+    </view>
+
+     <view class='wl'>
+      <view class='wl_left'>物流配送</view>
+      <view class='wl_right'>运费¥
+        <text>0.00</text>
+      </view>
+    </view>
+    <!-- 留言 -->
+    <view class='message'>
+      <input type='text' placeholder='订单留言：' bindinput='get_input'> </input>
+    </view>
+
+    <!-- 合计 -->
+    <view class='store-total'>
+      商品合计
+      <text>{{total_poin}}</text>积分
+    </view>
+  </view>
+</view>
+
+
+<!-- 底部固定 -->
+
+<view class='nctouch-cart-bottom'>
+  <view class='total'>
+    <view class='total-money'>
+      <view class='zong'>合计总金额：</view>
+      <view class='nub'>
+        
+        <text>{{total_poin}}积分</text>
+      </view>
+
+    </view>
+
+  </view>
+  <view class='check-out'>
+    <navigator class='b' bindtap='submit_'>
+      提交订单
+    </navigator>
+
+  </view>
+</view>
+
+
+
+
+
+
+<!-- 优惠卷 -->

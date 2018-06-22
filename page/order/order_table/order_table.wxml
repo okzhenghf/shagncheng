@@ -1,0 +1,294 @@
+<view hidden='{{table_hid}}'>
+  <!-- 收货人 -->
+  <view class='nctouch-cart-add-default'>
+    <navigator id='list-address-valve' url='../order_address_list/order_address_list'>
+      <image class='icon-add' src='../../../images/location_b.png'></image>
+      <view id='address_info'>
+        <view id='shou_ren' wx:if="{{has_address}}">
+          收货人：
+          <text id='true_name'>{{address_info.true_name}}</text>
+          <text id='mob_phone'>{{address_info.mob_phone}}</text>
+        </view>
+        <view id='address_' wx:if="{{has_address}}">
+          <text>{{address_info.area_info}} {{address_info.address}}</text>
+        </view>
+        <view id='wei' hidden='{{has_mo}}' hidden='{{has_address}}'>您还未绑定如何收回地址</view>
+      </view>
+      <image class='icon-arrow' src='../../../images/arrow_right_b.png'></image>
+    </navigator>
+  </view>
+
+  <view class='bge'></view>
+  <!-- 发票信息 -->
+  <view id='fa_info' bindtap='show_piao'>
+    <navigator class='posr' bindtap='show_piao'>
+      <view class='h3'>
+        <image src='../../../images/mcc_07_b.png' class='invoice'></image>
+        发票信息：
+      </view>
+
+      <view class='current-con'>
+        <view>{{piao_txt}}</view>
+      </view>
+      <image class='icon-arrow' src='../../../images/arrow_right_b.png'></image>
+    </navigator>
+  </view>
+  <view class='bge'></view>
+
+
+  <!-- 使用优惠卷 -->
+
+
+  <view id='fa_info' wx:if="{{has_juan}}" bindtap='show_jian'>
+    <navigator class='posr' bindtap='show_jian'>
+      <view class='h3'>
+        <image src='../../../images/mcc_08_b.png' class='invoice'></image>
+        使用优惠卷
+      </view>
+
+      <view class='current-con'>
+        <view>{{juan_txt}}</view>
+      </view>
+      <image class='icon-arrow' src='../../../images/arrow_right_b.png'></image>
+    </navigator>
+  </view>
+  <view class='bge'></view>
+  <!-- 商品信息 -->
+
+
+  <view class='nctouch-cart-container'>
+    <view class='gin_tit'>商品信息 :</view>
+    <view class='nctouch-cart-item'>
+
+      <!-- 循环商品 -->
+      <view class='buy-item' wx:for="{{goods_list}}">
+        <view class='b_zz z' wx:if="{{item.send_o}}">该商品不支持配送</view>
+        <view class='goods-pic'>
+          <navigator>
+            <image src='{{item.goods_image_url}}' mode='widthFix'></image>
+          </navigator>
+        </view>
+        <view class='goods-info'>
+          <view class='goods-name'>
+            <navigator>
+              {{item.goods_name}}
+            </navigator>
+          </view>
+          <view class='goods-type'>
+          </view>
+
+        </view>
+
+
+        <view class='goods-subtotal'>
+          <text class='goods-price' style='margin-right:10rpx;'><text class='small_y'>￥</text>{{item.goods_price}}</text>
+          <text class='goods-price' wx:if="{{item.user_discountdesc&&item.user_discountdesc!='100'}}"><text class='small_y'></text>会员享{{item.user_discountdesc}}折</text>
+        </view>
+
+        <view class='goods-num'>
+          <text class='x_j'>{{item.goods_num}}</text> 件
+        </view>
+
+      </view>
+    </view>
+    <view class='nctouch-cart-subtotal'>
+      <view class='wl'>
+        <view class='wl_left'>物流配送</view>
+        <view class='wl_right'>运费¥
+          <text>{{yunf}}</text>
+        </view>
+      </view>
+      <view class='wl' wx:if="{{dong_show}}">
+        <view class='wl_left'>优惠活动</view>
+        <view class='wl_right'>
+          <text wx:if="{{jq}}">{{dong_txt}}</text>
+          <view wx:if="{sl}" class='sl'>{{desc}}送<image src='{{sl_img}}' mode='widthFix'></image></view>
+        </view>
+      </view>
+      <!-- 留言 -->
+      <view class='message'>
+        <input type='text' placeholder='订单留言：' bindinput='get_ly'> </input>
+      </view>
+
+      <!-- 合计 -->
+      <view class='store-total'>
+        商品合计
+        <text>{{total_money}}</text>元
+      </view>
+    </view>
+  </view>
+
+
+  <!-- 底部固定 -->
+
+  <view class='nctouch-cart-bottom'>
+    <view class='total'>
+      <view class='total-money'>
+        <view class='zong'>合计总金额：</view>
+        <view class='nub'>
+          ¥
+          <text>{{total_money}}</text>
+        </view>
+
+      </view>
+
+    </view>
+    <view class='check-out'>
+      <navigator class='b' bindtap='all_get'>
+        提交订单
+      </navigator>
+
+    </view>
+  </view>
+
+
+</view>
+
+
+
+
+
+<!-- 优惠卷 -->
+<view class='out_' hidden='{{jian_hid}}'>
+
+  <view class="user_head">
+    使用优惠券抵消部分总额
+  </view>
+  <view class='jian_des'>
+    以下是此订单可用的优惠券。您可以
+    <navigator class='z' url='../../voucher_list/voucher_list'>查看所有优惠券</navigator>了解使用限制。
+  </view>
+
+  <view class='juan_info'>
+    <view class='juan_kind'>
+
+      <!-- 循环的优惠卷 -->
+      <view class='juan_item' wx:for="{{juan_data}}">
+        <text class='i_yuan' data-index='{{index}}' bindtap='ck_juan' wx:if='{{chk==index? false:true}}'></text>
+        <icon type="success" size='23' color="#fa4e51" wx:if='{{chk==index?true:false}}'></icon>
+
+        <image src='../../../images/j.jpg' mode='widthFix'></image>
+        <text class='z in_' data-index='{{index}}' bindtap='ck_juan'>
+          {{item.desc}}
+  </text>
+      </view>
+    </view>
+  </view>
+  <view class='juan_b'>
+    共使用了
+    <text class='z'>{{zhang}}</text> 张优惠券
+  </view>
+  <view class='juan_b'>
+    可优惠
+    <text class='z'>{{youhui}}</text>元
+  </view>
+
+  <view class='btn b' bindtap='jian_enter'>确定</view>
+  <view class='btn b' bindtap='jian_hui'>返回</view>
+</view>
+
+
+
+<!-- 发票管理 -->
+<view hidden='{{piao_hid}}'>
+  <view class="p_hmarg">
+    <view class='piao_head'>
+      <view>类型和抬头</view>
+      <view class='z'>温馨提示：发票的开票金额不包括使用优惠券支付部分</view>
+    </view>
+
+    <view class='tit'>开据方式</view>
+    <view class='sel-con'>
+      <view class='inv_style   {{need_invi==false? "cur":""}}' bindtap='no_need_invi'>不需要发票</view>
+      <view class='inv_style {{need_invi==true? "cur":""}}' bindtap='_need_invi'>需要发票(纸制) </view>
+
+    </view>
+  </view>
+  <!-- 发票历史 -->
+  <view class='invo_his' wx:if="{{need_invi}}">
+    <view class='his_item' wx:for="{{in_his_data}}">
+      <view catchtap='toggle_chk' class='wai_  {{in_chk==index?"cur":" "}}'  data-inv_id='{{item.inv_id}}' data-index='{{index}}'>
+        <view wx:if="{{in_chk==index}}" class='guo_' catchtap='toggle_chk' data-inv_id='{{item.inv_id}}' data-index='{{index}}'></view>
+      </view>
+      <text>{{item.inv_title}}  {{item.inv_content}}</text>
+      <image class='del_invo'  data-inv_id='{{item.inv_id}}'  bindtap='del_in'  mode='widthFix' src='../../../images/del_b.png'></image>
+    </view>
+
+      <!-- 新增 -->
+       <view class='his_item'>
+      <view catchtap='toggle_chk' class='wai_  {{in_chk=="新增"?"cur":" "}}' data-index='新增'>
+        <view wx:if="{{in_chk=='新增'}}" class='guo_' catchtap='toggle_chk' data-index='新增'></view>
+      </view>
+      <text>新增发票</text>
+    </view>
+  </view>
+
+
+  <!-- 需要发票展示 -->
+  <view wx:if="{{add_piao}}">
+    <view class='piao_'>
+      <view class='bge'></view>
+      <view class='invoiceNew'>
+        <!-- <text class='i_yuan'  hidden='{{true}}'></text> -->
+        <!-- <icon type="success" color="#fa4e51"></icon>  -->
+        <text class='zi_'>新增发票内容 :</text>
+      </view>
+    </view>
+
+
+    <!-- 发票类型 -->
+    <view class='invoice_Type'>
+      <view class='type_titl'>发票类型</view>
+      <view class='btn_style'>
+        <view class='{{invoice_Type==false? "cur":""}}' bindtap='ge'>个人</view>
+        <view class='{{invoice_Type==true? "cur":""}}' bindtap='dw'>单位</view>
+      </view>
+    </view>
+
+
+
+    <!-- 选择个人时展示 -->
+    <view class='invoice_Type' wx-if="{{invoice_Type==false}}">
+      <view class='type_titl'>发票内容</view>
+      <view class='sel_style'>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            {{array[index]}}
+          </view>
+        </picker>
+      </view>
+      <image src='../../../images/arrow_down_b.png' mode='widthFix'></image>
+    </view>
+
+
+
+
+    <!-- 单位时展示 -->
+    <view wx-if="{{invoice_Type}}">
+
+      <view class='info_item'>
+        <text class='zhi_'>发票抬头</text>
+        <input type='text' placeholder='输入企业或个人名称' bindinput='get_p_val' placeholder-class='d'></input>
+      </view>
+      <view class='invoice_Type'>
+        <view class='type_titl'>发票内容</view>
+        <view class='sel_style'>
+          <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="picker">
+              {{array[index]}}
+            </view>
+          </picker>
+        </view>
+        <image src='../../../images/arrow_down_b.png' mode='widthFix'></image>
+      </view>
+    </view>
+
+  </view>
+
+
+
+
+  <view class='btn b' bindtap='paio_enter'>确定</view>
+  <view class='btn b' bindtap='piao_fang'>返回</view>
+
+</view>

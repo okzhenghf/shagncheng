@@ -1,0 +1,95 @@
+#banner_details image{
+  width: 100%;
+  max-height: 100%!important;
+}
+#banner_details {
+   height: 751rpx; 
+}
+#Zgoods_des{
+     
+    padding: 3.1% 1.56%;
+    margin-bottom: 20rpx;
+    background-color: #FFFFFF;
+}
+#Zgoods_des>view:first-child {
+    font-size: 36rpx;
+    color: #616160;
+    line-height: 53rpx;
+}
+#Zgoods_info #Zgoods_des>.zgd_ji {
+    font-size: 36rpx;
+    color: #494949;
+}
+#Zgoods_info #Zgoods_des>.zgd_ji text {
+   
+    font-size: 45rpx;
+}
+.zgd_pir {
+    font-size: 28rpx;
+    color: #999999;
+    
+}
+.zgd_pir text{
+  text-decoration: line-through;
+}
+.zgd_pir view{
+  display: inline-block;
+}
+.tiP_{
+  font-size: 45rpx;
+}
+.Zgoods_range{
+      border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    background-color: #FFFFFF;
+    margin-bottom: 13rpx;
+    padding:20rpx 1.56%;
+}
+._number{
+  overflow: hidden;
+}
+._number>view:first-child{
+  line-height: 62.5rpx;
+    font-size: 31rpx;
+}
+._number>view {
+    float: left;
+}
+
+._number>view:last-child {
+    border: 1px solid #999999;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 4.6%;
+}
+
+._number>view:last-child>view:first-child, ._number>view:last-child>view:last-child {
+    width:62rpx;
+    height: 62rpx;
+    text-align: center;
+    line-height: 62rpx;
+    font-size: 36rpx;
+}
+._number>view:last-child>view{
+    float: left;
+}
+._number>view:last-child>view:nth-of-type(2) {
+    height: 62rpx;
+    text-align: center;
+    line-height: 62rpx;
+    font-size: 36rpx;
+    width: 91rpx;
+    border-left: 1px solid #999999;
+    border-right: 1px solid #999999;
+}
+.btn{
+  margin-top: 30rpx;
+  margin-bottom: 40rpx;
+}
+
+
+
+
+
+
+

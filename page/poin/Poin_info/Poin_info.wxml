@@ -1,0 +1,32 @@
+<swiper id='banner_details' autoplay="{{true}}">
+  <swiper-item>
+    <image src="{{poin_info.prodinfo.pgoods_image}}" mode="widthFix" />
+  </swiper-item>
+  <!-- <swiper-item>
+    <image src="../../../images/banner2.jpg" mode="widthFix" />
+  </swiper-item>
+  <swiper-item>
+    <image src="../../../images/banner3.jpg" mode="widthFix" />
+  </swiper-item> -->
+</swiper>
+
+
+<view id='Zgoods_des'>
+  <view>{{poin_info.prodinfo.pgoods_name}}</view>
+  <view class='zgd_ji'>积分：<text class='z'>{{poin_info.prodinfo.pgoods_points}}</text></view>
+  <view class='zgd_pir'>价格：<text>{{poin_info.prodinfo.pgoods_price}}</text></view>
+  <view class='zgd_pir'>兑换时间：<view></view>{{poin_info.prodinfo.pgoods_starttime}}至{{poin_info.prodinfo.pgoods_endtime}}</view>
+  <view class='tiP_ z'>一旦兑换，积分会立即扣除并不再退回</view>
+</view>
+
+<view class='Zgoods_range'>
+  <view class='_number'>
+    <view>数量</view>
+    <view>
+    <view id='De_down' bindtap='down'>-</view>
+    <view id='De_html'>{{num}}</view>
+    <view id='De_add' bindtap='add'>+</view></view>
+  </view>
+</view>
+
+<view class='btn b' bindtap='buy'>立即购买</view>

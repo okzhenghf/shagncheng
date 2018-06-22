@@ -1,0 +1,273 @@
+.header-tab{
+  display: inline-block;
+    height: 70rpx;
+    margin: 20rpx auto;
+    font-size: 0;
+    border-radius: 10rpx;
+}
+
+.header-tab navigator:first-child {
+    border-radius: 12rpx 0 0 12rpx;
+}
+.header-tab navigator {
+    display: inline-block;
+    height: 65rpx;
+    padding: 0 50rpx;
+    text-align: center;
+    font-size: 34rpx;
+    color: #333;
+    line-height: 65rpx;
+    border: solid 2.3rpx #ED5564;
+}
+.header-tab navigator:last-child {
+    border-radius: 0 12rpx 12rpx 0;
+}
+.top{
+  text-align: center;
+}
+.order_nub{
+  font-size: 30rpx;
+  display: inline-block;
+}
+page{
+  background-color: #f5f5f5;
+}
+.favo_head{
+      height: 117rpx;
+    border-bottom: 1px solid #e4e4e4;
+    background-color: #ffffff;
+}
+.favo_head>view{
+  float: left;
+    width: 50%;
+    text-align: center;
+    font-size: 41rpx;
+}
+.favo_head>view text {
+    height: 112rpx;
+    line-height: 120rpx;
+    display: inline-block;
+}
+.cur{
+      border-bottom: 5rpx solid #fa4e51;
+}
+.ch_tab{
+      height: 97rpx;
+    line-height: 97rpx;
+    background-color: #fff;
+    font-size: 35rpx;
+}
+.ch_tab .ck_btn{
+  margin-left: 13rpx;
+    margin-right: 26rpx;
+}
+.ck_btn{
+  position: relative;
+    width: 37rpx;
+    height: 37rpx;
+    background-color: #F5F5F5;
+    border: 2.5rpx solid #CCC;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.btn_cur{
+    background-color: #fa4e51;
+    border: #fa4e51 2rpx solid;
+}
+.ck_cur{
+      content: '';
+    position: absolute;
+    left: 8rpx;
+    top: 10rpx;
+    width: 20rpx;
+    height: 10rpx;
+    border-left: 3rpx solid #fff;
+    border-bottom: 3rpx solid #fff;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.ch_tab text{
+  margin-right: 52rpx;
+}
+.nctouch-tickets{
+  padding: 20rpx 26rpx 20rpx 13rpx;
+}
+.ticket-item{
+  position: relative;
+    z-index: 1;
+    display: block;
+    margin-bottom: 25rpx;
+}
+.ck_juan{
+   position: absolute;
+    margin-top: 100rpx;
+}
+.juan_info{
+      margin-left: 50rpx;
+    position: relative;
+}
+.border-left{
+      width: 15rpx;
+    height: 273rpx;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: block;
+    overflow: hidden;
+}
+.yuan{
+    width: 28rpx;
+    height: 28rpx;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    /* position: absolute; */
+    transform: translateX(-50%);
+    margin-top: 15rpx;
+}
+
+.block-center{
+  height: 273rpx;
+  background: #FFF;
+}
+.ticket-info{
+  height: 273rpx;
+    width: 37.8%;
+        position: relative;
+    z-index: 1;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.nctouch-tickets .ticket-item .block-center {
+    margin: 0 0 0 16rpx;
+    border-bottom: 1px solid #e4e4e4;
+}
+.ticket-info .dl {
+    top: 50%;
+    width: 100%;
+    right: 0;
+    transform: translate(0,-50%);
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    bottom: 25rpx;
+    display: block;
+    height: 90rpx;
+}
+ .ticket-item .ticket-info .dt {
+    font-size:50rpx;
+    line-height: 60rpx;
+    color: #FFF;
+}
+.nctouch-tickets .ticket-item .ticket-info .dt text {
+    font-size: 90rpx;
+}
+.nctouch-tickets .ticket-item .ticket-info .dd {
+    font-size: 28rpx;
+    color: #FFF;
+}
+.nctouch-tickets .ticket-item .store-info {
+    padding: 0 13rpx;
+    width: 62.2%;
+    box-sizing: border-box;
+        height: 273rpx;
+        position: relative;
+    z-index: 1;
+    display: inline-block;
+    vertical-align: top;
+}
+.nctouch-tickets .ticket-item .store-info .dl {
+    height: 185rpx;
+    border-bottom: 1px dashed #cccccc;
+    padding: 0;
+}
+.store-info .dt{
+  font-size: 30rpx;
+    line-height: 50rpx;
+    color: #333;
+        margin-top: 12.5rpx;
+    height: 90rpx;
+    overflow: hidden;
+}
+
+
+.nctouch-tickets .ticket-item .store-info dd {
+  line-height: 50rpx;
+    margin-top: 18rpx;
+    font-size: 20rpx;
+}
+.store-info .dd text{
+  font-size: 20rpx;
+}
+
+.store-info .dd navigator{
+  border: 2.5rpx solid #fa4e51;
+    width: 115rpx;
+    height: 45rpx;
+    line-height: 45rpx;
+    text-align: center;
+    color: #fa4e51;
+    font-size: 25rpx;
+    float: right;
+    border-radius: 11px;
+    margin-top: 10rpx;
+}
+#wu .store-info .dd navigator,#wu .store-info text{
+  border: none;
+  color: #888;
+}
+.sx .border-left,.sx .ticket-info {
+  background-color: #c3c3c3!important;
+}
+.juan_bot{
+      height: 75rpx;
+    line-height: 75rpx;
+    color: #acacac;
+    font-size: 25rpx;
+}
+.juan_bot image{
+  float: right;
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 20rpx;
+}
+.bottmo_info {
+    background-color: #fff;
+    font-size: 28rpx;
+    color: #666666;
+    padding: 25rpx 26rpx;
+    margin-left: 50rpx;
+    border: 1px solid #e4e4e4;
+    border-top: none;
+}
+.ticket-info image{
+ 
+      z-index: 3;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.50;
+    width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

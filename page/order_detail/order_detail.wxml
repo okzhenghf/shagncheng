@@ -1,0 +1,137 @@
+<view class="order-info-container">
+  <view class='nctouch-oredr-detail-block' id='ord_time'>
+    <view class='order-log'>
+      <view>订单编号：{{order_info.order_no}}</view>
+      <view>创建时间：{{order_info.create_time}}</view>
+      <view wx:if="{{order_info.pay_time!=0}}">付款时间：{{order_info.paytime}}</view>
+       <view wx:if="{{order_info.consign_time!=0}}">发货时间：{{order_info.consigntime}}</view>
+        <view wx:if="{{order_info.finish_time!=0}}">完成时间：{{order_info.finishtime}}</view>
+    </view>
+  </view>
+
+  <view class='nctouch-oredr-detail-block'>
+    <view class='h3'>交易状态</view>
+    <view class='order-state z'>{{order_info.pay_status_name}}</view>
+    <view class='info'></view>
+  </view>
+
+
+  <view class='nctouch-oredr-detail-block mt5'>
+    <view class='nctouch-oredr-detail-add'>
+      <view class='dl'>
+        <view class='dt'>收货人：<text>{{order_info.receiver_name}}</text><text>{{order_info.receiver_mobile}}</text></view>
+         <view class='dd'>
+          收货地址：{{order_info.address}}
+      </view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class='nctouch-oredr-detail-block' wx:if="{{order_info.order_message}}">
+    <view class='h3'>
+      <image src='../../images/mcc_04.png' class='msg' mode='widthFix'></image>
+      买家留言
+    </view>
+    <view class='info'>{{order_info.buyer_message}}</view>
+
+  </view>
+
+
+<!--   
+  <view class='nctouch-oredr-detail-block'>
+    <view class='h3'>
+      <image src='../../images/mcc_08_b.png' class='msg' mode='widthFix'></image>
+      发票信息
+    </view>
+    <view class='info'>{{order_info.invoice}}</view>
+
+  </view> -->
+
+  <view class='nctouch-order-item mt5'>
+    <view class='nctouch-order-item-con'>
+        <view class='goods-block detail' wx:for="{{order_info.order_goods}}">
+            <navigator>
+                <view class='goods-pic'>
+                    <image src='{{tp+"/"+item.picture_info.pic_cover_big}}' mode='widthFix'></image>
+                </view>
+                <view class='goods-info'>
+                  <view class='goods-name'>{{item.goods_name}}</view>
+                  <!-- <view class='goods-type'>类型：卤鸭脖</view> -->
+                </view>
+                <view class='goods-subtotal'>
+                  <text class='goods-price'>￥{{item.price}}</text>
+                  <text class='goods-num'>x{{item.num}}</text>
+                </view>
+            </navigator>
+            <navigator  wx:if="{{item.refund==1}}" url='../tui/tui?order_goods_id={{item.rec_id}}&order_id={{order_info.order_id}}'  data-order_id='{{order_info.order_id}}' class='goods-return'>
+               退货
+            </navigator >
+        </view>
+
+      <view class='goods-gift'  wx:if="{{zp_show}}">
+          <!-- <view class='tx_' wx:for="{{order_info.zengpin_list}}"> -->
+            <text class='zp'>赠送</text><text class='zs'>{{order_info.give_point}}积分</text>
+          <!-- </view> -->
+      </view>
+
+
+        <view class='goods-subtotle'>
+            <view class='dl'>
+              <view class='dt'>积分</view>
+              <view class='dd'>
+                <text>{{order_info.point}}</text>
+              </view>
+            </view>
+
+             <view class='dl'>
+              <view class='dt'>活动优惠</view>
+              <view class='dd'>
+                <text>{{order_info.promotion_money}}</text>
+              </view>
+            </view>
+
+             <view class='dl'>
+              <view class='dt'>运费</view>
+              <view class='dd'>
+                <text>￥{{order_info.shipping_money}}</text>
+              </view>
+            </view>
+
+             <view class='dl t'>
+              <view class='dt'>实付款（含运费）</view>
+              <view class='dd'>
+                <text class='z'>￥{{order_info.pay_money}}</text>
+              </view>
+            </view>
+        
+        
+        </view>
+
+    
+    </view>
+  
+  
+  </view>
+
+</view>
+
+
+<view class='btns'>
+
+  <navigator class='btn b' bindtap='pay_order' data-pay_sn='{{order_info.pay_sn}}' wx:if="{{order_info.status_name=='待付款'}}">订单支付（￥{{order_info.pay_money}}）</navigator>
+
+
+    <navigator class='btn b' bindtap='again_buy'  data-cid='{{order_info.goods_arr}}' wx:if="{{order_info.status_name!='待付款'}}">再次购买</navigator>
+
+    <navigator class='btn b'  bindtap='cancel_order'  data-order_id='{{order_info.order_id}}' wx:if="{{order_info.status_name=='待付款'}}">取消订单</navigator>
+
+    <navigator class='btn b' url='../tuik/tuik?order_id={{order_info.order_id}}' data-order_id='{{order_info.order_id}}' wx:if="{{order_info.status_name=='已发货'}}">订单退款</navigator>
+
+    <navigator class='btn b' data-order_id='{{order_info.order_id}}' wx:if="{{order_info.status_name=='已发货'}}">查看物流</navigator>
+    
+    <navigator class='btn b'  bindtap='sureorder' data-order_id='{{order_info.order_id}}' wx:if="{{order_info.status_name=='已发货'}}">确认收货</navigator>
+    
+    <navigator class='btn b' url='../evaluation/evaluation?order_id={{order_info.order_id}}'  data-order_id='{{order_info.order_id}}' wx:if="{{order_info.status_name=='已完成'&&order_info.is_evaluate==0}}">评价订单</navigator>
+    <view class='tiz' wx:if="{{order_info.if_lock}}">退款/退货中...</view>
+</view>

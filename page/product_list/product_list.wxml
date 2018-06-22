@@ -1,0 +1,34 @@
+
+
+
+<!-- 筛选产品列表 -->
+
+<view id='pro_select' hidden='{{is_kong}}'>
+    <view class='sel_item' wx:for="{{goods_list}}">
+      <navigator class='sel_container' url='../details/details?goods_id={{item.goods_id}}'>
+        <view class='img_c'>
+          <image src='{{data_new_http+"/"+item.pic_cover_small}}' mode='widthFix'></image>
+        </view>
+        <view class='des_in'>
+          <view class='des_pro'>
+            <text>{{item.goods_name}}</text>
+            <view class='des_gd'>{{item.goods_jingle}}</view>
+          </view>
+          <view class='pro_price'>
+            <text>¥</text>{{item.promotion_price}}
+          </view>
+        </view>
+      </navigator>
+    </view>
+</view>
+
+<view id='no_show' class='nctouch-norecord' hidden='{{is_kong==false}}'>
+  <view class='norecord-ico'>
+    <image mode='scaleToFill' src='../../images/search_w.png'></image>
+  </view>
+  <view class='z_dl'>
+    <view class='z_dt'>没有找到任何相关信息</view>
+    <view class='z_dd'>选择或搜索其它商品分类/名称...</view>
+  </view>
+    <navigator bindtap='back' url='../categroy/categroy'>重新选择</navigator>
+</view>

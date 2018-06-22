@@ -1,0 +1,89 @@
+<view class='top'>
+  <view class='header-tab'>
+    <navigator class='' url='../voucher_list/voucher_list'>我的优惠劵</navigator>
+    <navigator class='z' url='../get_voucher/get_voucher'>领取优惠券</navigator>
+  </view>
+</view>
+
+
+
+
+
+<view class='nctouch-voucher-list'>
+  <view class='nctouch-tickets'>
+    <!-- 有效优惠卷 -->
+    <view id='you'>
+      <view  wx:for="{{vou_list}}"   class='ticket-item {{item.voucher_state==0? "":"sx"}}' wx:key="item.voucher_t_id">
+
+        <view class='juan_info'>
+          <view class='border-left b'>
+            <view class='yuan'></view>
+            <view class='yuan'></view>
+            <view class='yuan'></view>
+            <view class='yuan'></view>
+            <view class='yuan'></view>
+            <view class='yuan'></view>
+            <view class='yuan'></view>
+          </view>
+
+          <view class='block-center'>
+            <view class='ticket-info b'>
+               <image src='../../images/ticket_ylq.png' mode='widthFix' wx:if="{{item.voucher_state==1}}"></image>
+              <view class='dl'>
+                <view class='dt'>￥
+                  <text>{{item.voucher_t_price}}</text>
+                </view>
+                <view class='dd' wx:if="{{item.voucher_t_limit}}">满{{item.voucher_t_limit}}使用</view>
+              </view>
+
+            </view>
+
+            <view class='store-info'>
+              <view class='dl'>
+                <view class='dt'>{{item.voucher_t_title}}</view>
+                <view class='dd'>
+                  <text>有效期至：{{item.voucher_t_end_date_text}}</text>
+                  <navigator url='../product_list/product_list' wx:if="{{item.voucher_state == 1}}">立即使用</navigator>
+                  <navigator wx:if="{{item.voucher_state == !1}}" bindtap='getFreeVoucher' data-gid='{{item.voucher_t_id}}'>确认领取</navigator>
+                </view>
+
+              </view>
+
+              <view class='juan_bot' catchtap='show_z' data-index='{{index}}'>
+
+                详细信息
+                <image src='../../images/do_07.jpg' mode='widthFix' catchtap='show_z' data-index='{{index}}'></image>
+              </view>
+
+
+            </view>
+
+          </view>
+
+        </view>
+        <view class='bottmo_info' wx:if="{{item.z}}">单笔订单实际支付20.00元即可使用</view>
+
+      </view>
+
+      <!-- 111 -->
+               
+    </view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </view>
+</view>

@@ -1,0 +1,29 @@
+<view class='special-tips'>
+  <view>发货5天后，当商家选择未收到则要进行延迟时间操作；如果超过7天不处理按弃货处理，直接由管理员确认退款。</view>
+</view>
+
+
+ <view class='form_item'>
+    <picker range="{{wuliu_arr}}" bindchange="bindPickerChange">
+      <view class='h4'>物流公司</view>
+      <view class='input-box'>
+        <input disabled='{{true}}'  value='{{wuliu_txt}}'></input>
+        <view class='pl_che'>请选择
+          <image src='../../images/dright_03.jpg' mode='Fixwidth'></image>
+        </view>
+      </view>
+    </picker>
+  </view>
+
+   <view class='form_item'>
+    
+      <view class='h4'>物流单号</view>
+      <view class='input-box'>
+        <input placeholder='请填写物流单号' bindinput='get_val'></input>
+        <view class='pl_che'>
+        </view>
+      </view>
+    
+  </view>
+
+  <view class='btn b' bindtap='submit_'>提交</view>

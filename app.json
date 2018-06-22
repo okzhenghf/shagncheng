@@ -1,0 +1,89 @@
+{
+  "pages": [
+    "page/index/index",
+    
+    "page/order_list/order_list",
+    
+    
+    
+    
+    
+    
+    
+    
+      "page/order/order_address_list/order_address_list",
+    "page/order/order_address_add/order_address_add",
+    "page/poin/get_balance/get_balance",
+    "page/return/return",
+    "page/return_ship/return_ship",
+    "page/refund/refund",
+    "page/order/order_table/order_table",
+    "page/voucher_list/voucher_list",
+    "page/collect/collect",
+    "page/user/user",
+    "page/categroy/categroy",
+    "page/shopcar/shopcar",
+    "page/poin_order/order_table/order_table",
+    "page/order/order_coupon/order_coupon",
+    "page/poin/Poin_store/Poin_store",
+    "page/poin/Poin_record/Poin_record",
+    "page/poin/Poin_car/Poin_car",
+    "page/order/order_address_edit/order_address_edit",
+    "page/poin_order/order_address_list/order_address_list",
+    "page/liu/liu",
+    "page/tuik/tuik",
+    "page/tui/tui",
+    "page/get_voucher/get_voucher",
+    "page/poin/Poin_list/Poin_list",
+    "page/poin/Poin_info/Poin_info",
+    "page/product_list/product_list",
+    "page/search/search",
+    "page/poin_order/order_address_edit/order_address_edit",
+    "page/poin_order/order_address_add/order_address_add",
+    "page/order/order_invoice/order_invoice",
+    "page/return_info/return_info",
+    "page/evaluation/evaluation",
+    "page/complain/complain",
+    "page/order_detail/order_detail",
+    "page/pay/pay",
+    "page/details/details"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#fa4e51",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "红酒",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "page/index/index",
+        "text": "首页",
+        "iconPath": "images/n3.png",
+        "selectedIconPath": "images/cn3.png"
+      },
+      {
+        "pagePath": "page/categroy/categroy",
+        "text": "分类",
+        "iconPath": "images/browse_list.png",
+        "selectedIconPath": "images/browse_listh.png"
+      },
+      {
+        "pagePath": "page/shopcar/shopcar",
+        "text": "购物车",
+        "iconPath": "images/n2.png",
+        "selectedIconPath": "images/cn2.png"
+      },
+      {
+        "pagePath": "page/user/user",
+        "text": "个人",
+        "iconPath": "images/n1.png",
+        "selectedIconPath": "images/cn1.png"
+      }
+    ],
+    "color": "#cccaca",
+    "selectedColor": "#e84b22"
+  }
+}

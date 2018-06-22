@@ -1,0 +1,46 @@
+.z{
+   color: #fa4e51!important;
+}
+.b{
+  background-color:#fa4e51!important; 
+}
+.info_{
+
+padding: 20rpx;
+margin-bottom: 10rpx;
+
+}
+.zhi_{
+    display: inline-block;
+    width: 160rpx;
+    /* background-color: red; */
+    font-size: 34rpx;
+    margin-left: 10rpx;
+}
+.info_item input{
+   display: inline-block;
+   font-size: 34rpx;
+   vertical-align: text-top;
+   /* color: #e4e4e4 */
+}
+.info_item{
+  padding: 20rpx 0 30rpx 0;
+  border-bottom: 2rpx solid #e4e4e4;
+  margin-bottom: 20rpx;
+}
+.d{
+  color: #bcbbbb;
+}
+.btn{
+  width: 90%;
+  height: 95rpx;
+  text-align: center;
+  line-height: 95rpx;
+  font-size: 34rpx;
+  margin: 0 auto;
+  color:#fff;
+  border-radius: 8rpx;
+}
+picker{
+  display: inline-block;
+}

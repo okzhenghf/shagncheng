@@ -1,0 +1,58 @@
+<view class="header b">
+<view class='header-wrap'>
+    <view class='header'></view>
+    <view class='header-inp'>
+      <image class='icon' src='../../images/search_ico.png'></image>
+      <input type='text' placeholder='搜索' bindinput="get_val"></input>
+    </view>
+    <view class='header-r'>
+      <text class='header-nav' bindtap='to_list'>搜索</text>
+    </view>
+</view>
+</view>
+
+
+<view class='nctouch-search-layout'>
+  <view class='hot-keyword'>
+    <view class='tit'>热搜</view>
+    <view class='hot_list_container'>
+        <view class='hot_item b' wx:for="{{hot_key}}">
+          <navigator url='../product_list/product_list?keyword={{item}}'>{{item}}</navigator>
+        </view>
+       
+    </view>
+  
+  </view>
+
+  <view class='his'>
+    <view class='his_head'>
+      <text>历史纪录</text>
+    </view>
+    <view class='search_his_list_container'>
+      <view class='hot_item b' wx:for="{{his_list}}">
+          <navigator url='../product_list/product_list?keyword={{item}}'>{{item}}</navigator>
+        </view>
+       
+    
+
+    <view class='clear-history' bindtap='clear_his' hidden='{{history.length==0}}'>
+      <image src='../../images/lja_03.jpg'></image>
+        <text>清空历史</text>
+    </view>
+
+
+
+    </view>
+
+
+
+
+  </view>
+
+
+
+
+
+
+
+</view>

@@ -1,0 +1,21 @@
+<view class='nctouch-asset-info'>
+  <view class='container voucher'>
+      <image src='../../../images/mcc_08_w.png'></image>
+      <view class='rule dl'>
+          <view class='dd'>
+          1.请输入已获得的积分数量兑换余额
+          </view>
+          <view class='dd'>
+          2.兑换比例为1积分兑换0.50元
+          </view>
+      </view>
+  </view>
+</view>
+<view class='form-item'>
+  <view class='h4'>积分数量</view>
+  <view class='input-box'>
+    <input type='text' placeholder='请输入需要兑换的积分数量'></input>
+  </view>
+</view>
+<view class='txt z'>兑换金额为100元</view>
+<view class='btn b'>确认提交</view>

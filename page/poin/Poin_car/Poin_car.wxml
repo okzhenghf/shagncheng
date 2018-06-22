@@ -1,0 +1,88 @@
+<view class="goods_list" >
+  <view class='nctouch-cart-container'>
+    <view class='nctouch-cart-item'>
+      <block wx:for="{{goods_list}}" key="{{index}}">
+        <view class='cart-litemw-cnt'>
+        
+          <view class='goods-pic'>
+            <navigator>
+              <image src='{{item.pgoods_image_small}}'></image>
+            </navigator>
+          </view>
+          <view class='goods-info'>
+            <view class='goods-name'>
+              <navigator> {{item.pgoods_name}} </navigator>
+            </view>
+            <view class='goods-type'></view>
+          </view>
+
+
+          <view class='goods-del'>
+            <image src='../../../images/del_b.png' data-cart_id='{{item.pcart_id}}'  bindtap='del' mode='widthFix'></image>
+          </view>
+          <view class='goods-subtotal'>
+            <text class='goods-price z'>{{item.pgoods_points}}积分</text>
+            <view class='value-box'>
+              <view class='minus' data-index="{{index}}" data-cart_id='{{item.pcart_id}}' catchtap='down'>
+                <image src='../../../images/value_minus.png' data-index="{{index}}" catchtap='down'></image>
+              </view>
+              <view>
+                <input type='text' value='{{item.pgoods_choosenum}}' disabled='{{true}}'></input>
+              </view>
+              <view class='add' catchtap='add' data-index="{{index}}" data-cart_id='{{item.pcart_id}}'>
+                <image src='../../../images/value_add.png' catchtap='add' data-index="{{index}}"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
+<!-- 底部固定 -->
+<view class='nctouch-cart-bottom' hidden='{{is_kong}}' >
+ 
+  <view class='total'>
+    <view class='total-money'>
+      <view class='t'>
+        合计总积分：
+      </view>
+      <view class='c'>
+        <text class='z'></text>
+        <text class='z'>{{total_}}积分</text>
+      </view>
+    </view>
+  </view>
+<view class='check-out b {{hui==true? "hui":""}}' bindtap='pay'>
+      确认信息
+</view>
+</view>
+
+
+
+
+<!-- 购物车为空时显示 -->
+
+
+<view class='nctouch-norecord' wx:if="{{is_kong}}">
+<view class='norecord-ico'>
+  <image src='../../../images/cart_w.png'></image>
+</view>
+<view class='cord_b'>
+    <view class='f_cord'>您的购物车还是空的</view>
+    <view class='b_cord'>去挑一些中意的商品吧</view>
+</view>
+
+<navigator url='../Poin_store/Poin_store' >随便逛逛</navigator>
+
+</view>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,370 @@
+.z{
+   color: #fa4e51!important;
+}
+.b{
+  background-color:#fa4e51!important; 
+}
+.goods_list{
+  margin-bottom: 125rpx;
+}
+.nctouch-cart-container{
+  display: block;
+    clear: both;
+    background-color: #FFF;
+    margin-bottom: 25rpx;
+    border: solid #EEE;
+    border-width: 2.5rpx;
+}
+.nctouch-cart-item{
+      background-color: #FFF;
+    border-bottom: solid 2.5rpx #EEE;
+}
+.cart-litemw-cnt{
+      display: block;
+    position: relative;
+    z-index: 1;
+    margin-left: 25rpx;
+    padding: 25rpx 0;
+    border-bottom: solid #EEE 2.5rpx;
+}
+.cart-litemw-cnt:last-child{
+   border: none; 
+}
+
+.nctouch-cart-item .cart-litemw-cnt .goods-check {
+    position: absolute;
+    top: 60rpx;
+}
+.goods-check .wai_{
+  position: relative;
+    width: 37rpx;
+    height: 37rpx;
+     background-color: #F5F5F5; 
+    border: 2.5rpx solid #CCC;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.cur{
+   border-color: #fa4e51!important;
+    background-color: #fa4e51!important;
+}
+.guo_{
+    position: absolute;
+     left: 8rpx; 
+     top: 10rpx; 
+    width: 20rpx;
+    height: 10rpx;
+    border-left: 4rpx solid #fff;
+    border-bottom: 4rpx solid #fff;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.nctouch-cart-item .cart-litemw-cnt .goods-pic{
+display: block;
+    width: 155rpx;
+    height: 155rpx;
+    position: absolute;
+    z-index: 1;
+    top: 25rpx;
+    left: 55rpx;
+    border: solid 2.5rpx  #EEE;
+    border-radius: 10rpx;
+
+
+}
+.goods-pic navigator{
+
+  display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+.nctouch-cart-item  .goods-pic image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10rpx;
+}
+
+.nctouch-cart-item  .goods-info {
+    display: block;
+    vertical-align: top;
+    height: 110rpx;
+    margin: 0 100rpx 0 225rpx;
+    position: relative;
+    z-index: 1;
+}
+.goods-name navigator{
+display: block;
+    height: 70rpx;
+    font-size: 30rpx;
+    color: #111;
+    line-height: 35rpx;
+    overflow: hidden;
+
+}
+.nctouch-cart-item .goods-type {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 70%;
+    height: 45rpx;
+    font-size: 22.5rpx;
+    line-height: 45rpx;
+    color: #999;
+    text-overflow: ellipsis;
+}
+
+.nctouch-cart-item  .goods-del {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 15rpx;
+    right: 25rpx;
+    width:40rpx;
+    height: 40rpx;
+}
+
+
+
+.nctouch-cart-item  .goods-del image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+.goods-subtotal{
+      display: block;
+    height: 50rpx;
+    margin: 0 25rpx 0 225rpx;
+    line-height: 50rpx;
+    font-size: 30rpx;
+    position: relative;
+    z-index: 1;
+}
+.goods-price{
+ 
+    font-size: 27rpx;
+    font-weight: 600;
+}
+.value-box{
+
+      position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    display: inline-block;
+    float: right;
+    font-size: 0;
+    border: solid 2.5rpx #CCC;
+    border-radius: 10rpx;
+}
+.value-box view.minus {
+    background-color: #FAFAFA;
+    border-radius: 10rpx 0 0 10rpx;
+}
+
+.value-box view {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 0;
+}
+.minus image{
+
+     display: inline-block;
+    width: 20rpx;
+    height: 20rpx;
+    margin: 20rpx;
+    opacity: 0.65;
+}
+
+.add image{
+
+     display: inline-block;
+    width: 20rpx;
+    height: 20rpx;
+    margin: 20rpx;
+    opacity: 0.65;
+}
+.value-box input {
+    width: 60rpx;
+    height: 60rpx;
+    padding: 0;
+    font-size: 30rpx;
+    font-weight: lighter;
+    line-height: 65rpx;
+    text-align: center;
+    border: solid #CCC;
+    border-width: 0 2.5rpx;
+    border-radius: 0;
+    
+}
+
+
+.value-box .add {
+    background-color: #FAFAFA;
+    border-radius: 0 10rpx 10rpx 0;
+    display: inline-block;
+   
+}
+
+
+.nctouch-cart-bottom{
+position: fixed;
+    z-index: 1;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height:111rpx;
+    background-color: rgba(255,255,255,0.85);
+    border-top: solid 2.5rpx #EEE;
+
+
+}
+.all-check{
+    position: absolute;
+    z-index: 1;
+    top: 37rpx;
+    left: 25rpx;
+    /* vertical-align: middle; */
+    display: flex;
+
+}
+
+
+
+.wai_ {
+
+width:37rpx;
+height:37rpx;
+background-color:#F5F5F5;
+border:2.5rpx solid #CCC;
+-webkit-border-radius:50%;
+border-radius:50%;
+vertical-align:middle;
+display: inline-block;
+
+}
+
+.all-check text{
+      font-size: 30rpx;
+      display: inline-block;
+      margin-left: 10rpx;
+}
+
+.all-check .guo_{
+  top: 10rpx;
+}
+
+.nctouch-cart-bottom .total {
+    display: block;
+    float: left;
+    text-align: right;
+    width: 75%;
+}
+.nctouch-cart-bottom .total-money {
+    height: 50rpx;
+    margin-right: 50rpx;
+    padding: 25rpx 0;
+    font-size: 0;
+    line-height: 50rpx;
+    vertical-align: top;
+}
+.t{
+
+  display: inline-block;
+    font-size: 30rpx;
+}
+.c{
+      display: inline-block;
+    font-size: 27rpx;
+   
+    font-weight: 600;
+
+}
+.c text:last-child{
+  font-size: 45rpx;
+}
+.check-out{
+
+  display: block;
+    float: right;
+    width: 25%;
+    height: 111rpx;
+    text-align: center;
+    line-height: 111rpx;
+    color: #fff;
+    
+}
+.hui{
+
+
+  background-color: #BBB!important;
+}
+
+
+
+.nctouch-norecord {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    width: 500rpx;
+    height: 410rpx;
+    margin: -150rpx 0 0 -250rpx;
+    text-align: center;
+    font-size: 0;
+}
+.norecord-ico{
+
+  display: inline-block;
+    width: 110rpx;
+    height: 110rpx;
+    padding: 20rpx;
+    margin: 0 auto;
+    background-color: #DDD;
+    border-radius: 100%;
+}
+
+.norecord-ico image{
+  display: block;
+    width: 100%;
+    height: 100%;
+}
+.cord_b {
+    height: 137rpx;
+    margin-top: 37rpx;
+}
+.f_cord{
+      display: block;
+    height: 50rpx;
+    margin-bottom: 12rpx;
+    font-size: 38rpx;
+    line-height:50rpx;
+}
+.b_cord{
+  display: block;
+    height: 50rpx;
+    margin-bottom: 25rpx;
+    font-size: 28rpx;
+    line-height: 50rpx;
+    color: #999;
+}
+.nctouch-norecord navigator{
+
+  vertical-align: top;
+    display: inline-block !important;
+    height: 55rpx;
+    padding: 0 15rpx;
+    margin: 0 auto;
+    font-size: 30rpx;
+    color: #555 !important;
+    line-height: 55rpx;
+    text-align: center;
+    background-color: #FFF;
+    border: solid 1px #CCC;
+    border-radius: 8rpx;
+}

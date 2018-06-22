@@ -1,0 +1,42 @@
+<view class='out_'>
+
+  <view class="user_head">
+    使用优惠券抵消部分总额
+  </view>
+  <view class='jian_des'>
+    以下是此订单可用的优惠券。您可以
+    <navigator class='z'>查看所有优惠券</navigator>了解使用限制。
+  </view>
+
+  <view class='juan_info'>
+    <view class='juan_kind'>
+
+      <!-- 循环的优惠卷 -->
+      <view class='juan_item' wx:for="{{juan_data}}">
+        <text class='i_yuan' data-index='{{index}}' bindtap='ck_juan' wx:if='{{chk==index? false:true}}'></text>
+        <icon type="success" size='23' color="#fa4e51" wx:if='{{chk==index?true:false}}'></icon>
+
+        <image src='../../../images/j.jpg' mode='widthFix'></image>
+        <text class='z in_' data-index='{{index}}' bindtap='ck_juan'>
+          {{item.desc}}
+  </text>
+      </view>
+
+  
+    </view>
+  </view>
+
+
+  <view class='juan_b'>
+    共使用了
+    <text class='z'>{{zhang}}</text> 张优惠券
+  </view>
+  <view class='juan_b'>
+    可优惠
+    <text class='z'>{{youhui}}</text>元
+  </view>
+
+
+  <view class='btn b'>确定</view>
+
+</view>

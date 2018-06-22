@@ -1,0 +1,87 @@
+.btn{
+  width: 90%;
+  height: 95rpx;
+  text-align: center;
+  line-height: 95rpx;
+  font-size: 34rpx;
+  margin: 0 auto;
+  color:#fff;
+  border-radius: 8rpx;
+    margin-top: 40rpx;
+}
+.z{
+   color: #fa4e51!important;
+}
+.b{
+  background-color:#fa4e51!important; 
+}
+.user_head{
+    height: 120rpx;
+    line-height: 120rpx;
+    font-size: 45rpx;
+    color: #333333;
+}
+.p_hmarg{
+  padding: 10rpx 20rpx;
+}
+.out_{
+  padding: 0 20rpx;
+}
+.jian_des{
+  font-size: 32.5rpx;
+}
+.jian_des navigator{
+
+  display: inline;
+}
+.juan_info{
+      margin: 52rpx 0;
+    background-color: #eeeeee;
+    border: 4rpx solid #dbdbdb;
+}
+.juan_kind{
+     font-size: 32rpx;
+    padding: 15rpx 13rpx;
+}
+.juan_item{
+      margin-bottom: 58rpx;
+}
+
+.i_yuan{
+    position: relative;
+    display: inline-block;
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 10rpx;
+    background-color: #F5F5F5;
+    border: 2.5rpx solid #CCC;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    vertical-align: middle;
+
+}
+.juan_item icon{
+   vertical-align: middle; 
+}
+.juan_item image{
+  width: 100rpx;
+    vertical-align: middle;  
+  margin: 0 20rpx;
+}
+.juan_item text{
+  display: inline-block;
+}
+
+ .in_{
+  /* display: inline-block; */
+ width: 480rpx;
+ /* height: 60rpx; */
+    vertical-align: text-top;  
+    margin-top: -50rpx; 
+ /* display: flex; */
+ /* align-content: flex-start; */
+} 
+
+.juan_b{
+  font-size: 32rpx;
+}

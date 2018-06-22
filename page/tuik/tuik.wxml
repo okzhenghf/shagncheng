@@ -1,0 +1,103 @@
+<view class='order-info-container'>
+  <view class='nctouch-order-item'>
+    <view class='nctouch-order-item-con'>
+      <view class='goods-block detail' wx:for="{{goods_data}}">
+        <navigator>
+          <view class='goods-pic'>
+            <image mode='widthFix' src='{{item.goods_img_360}}'></image>
+          </view>
+          <view class='goods-info'>
+            <view class='goods-name'>{{item.goods_name}}</view>
+
+          </view>
+          <view class='goods-subtotal'>
+            <text class='goods-price'>
+                    ￥<text>{{item.goods_price}}</text>
+            </text>
+            <text class='goods-num'>x{{item.goods_num}}</text>
+
+          </view>
+
+        </navigator>
+
+      </view>
+
+    </view>
+
+  </view>
+
+</view>
+
+
+
+<view class="special-tips">
+  <view class=''>特别提示：退款凭证选择直接拍照或从手机相册上传图片时，请注意图片尺寸控制在1M以内，超出请压缩裁剪后再选择上传！</view>
+</view>
+<view class='form_box'>
+  <view class='form_item'>
+    
+      <view class='h4'>退款原因</view>
+      <view class='input-box'>
+        <input disabled='{{true}}' value='取消订单，全部退款'  disabled='{{true}}'></input>
+        
+      </view>
+  
+  </view>
+
+
+
+  <view class='form_item'>
+    <view class='h4'>退款金额</view>
+    <view class='input-box'>
+      <input value='{{money_all}}' disabled='{{true}}'></input>
+      <view class='pl_che'>
+      </view>
+    </view>
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <view class='form_item' id='text_yu'>
+    <view class='h4'>退款说明</view>
+    <view class='input-box'>
+      <textarea placeholder='申请原因！' bindinput='get_area'></textarea>
+
+    </view>
+  </view>
+
+  <view class='form_item upload-item'>
+    <view class='h4'>上传凭证</view>
+    <view class='input-box'>
+      <view>
+        <view class='nctouch-upload' bindtap='check_image1'>
+          <image src='{{m1}}' class='{{m1=="../../images/value_add.png"? "icon-upload":""}}' mode='Fixwidth'></image>
+        </view>
+        <view class='nctouch-upload' bindtap='check_image2'>
+          <image src='{{m2}}' class='{{m2=="../../images/value_add.png"? "icon-upload":""}}' mode='Fixwidth'></image>
+        </view>
+
+        <view class='nctouch-upload' bindtap='check_image3'>
+          <image src='{{m3}}' class='{{m3=="../../images/value_add.png"? "icon-upload":""}}' mode='Fixwidth'></image>
+        </view>
+
+      </view>
+
+
+    </view>
+  </view>
+
+</view>
+<view class='btn b de_B' bindtap='submit_'>提交</view>

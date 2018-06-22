@@ -1,0 +1,60 @@
+<view class="nctouch-default-list-tit">我的退款申请</view>
+<view class='nctouch-default-list'>
+    <view class='list_item'>
+        <view class='h4'>退款编号</view>
+        <text class='num'>{{return_info.refund_sn}}</text>
+    </view>
+
+    <view class='list_item'>
+        <view class='h4'>退款原因</view>
+        <text class='num'>{{return_info.reason_info}}</text>
+    </view>
+
+    <view class='list_item'>
+        <view class='h4'>退款金额</view>
+        <text class='num'>{{return_info.refund_amount}}</text>
+    </view>
+
+     <view class='list_item'>
+        <view class='h4'>退款说明</view>
+        <text class='num'>{{return_info.buyer_message}}</text>
+    </view>
+
+     <view class='list_item'>
+        <view class='h4'>凭证上传</view>
+        <view class='pics'>
+          <image  wx:for="{{pic_list}}"   wx:if="{{item}}"  src='{{item}}' data-img='{{item}}'  bindtap='look_img' mode='widthFix'></image>
+        </view>
+    </view>
+</view>
+
+<view class="nctouch-default-list-tit">商家退款处理</view>
+<view class='nctouch-default-list'>
+    <view class='list_item'>
+        <view class='h4'>审核状态</view>
+        <text class='num'>{{return_info.seller_state}}</text>
+    </view>
+
+    <view class='list_item'>
+        <view class='h4'>商家备注</view>
+        <text class='num'>{{return_info.seller_message!=null?return_info.seller_message:""}}</text>
+    </view>
+
+    
+</view>
+
+
+<view class="nctouch-default-list-tit">商城退款审核</view>
+<view class='nctouch-default-list'>
+    <view class='list_item'>
+        <view class='h4'>平台确认</view>
+        <text class='num'>{{return_info.admin_state}}</text>
+    </view>
+
+    <view class='list_item'>
+        <view class='h4'>平台备注</view>
+        <text class='num'>{{return_info.admin_message!=null?return_info.admin_message:""}}</text>
+    </view>
+
+    
+</view>

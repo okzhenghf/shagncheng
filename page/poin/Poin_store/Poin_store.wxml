@@ -1,0 +1,41 @@
+<view id="P_top">
+  <view id='P_top_l'><image src='../../../images/jfsct_03.jpg' mode='widthFix'></image>我的积分：
+  <text class='z'>{{poin_data.member_info.member_points}}</text></view>
+
+  <view id='P_top_r'>
+    <navigator url='../Poin_record/Poin_record'>查看兑换记录</navigator>
+  </view>
+</view>
+
+<view class='ge'>
+</view>
+
+<view id='P_store_list'>
+    <view class='P_store_item' wx:for="{{poin_data.pointprod_list}}">
+        <navigator url='../Poin_info/Poin_info?id={{item.pgoods_id}}'>
+            <view class='Pstr_img'>
+                <image src='{{item.pgoods_image}}' mode='widthFix'></image>
+            </view>
+            <view class='Pstr_na'>{{item.pgoods_name}}</view>
+            <view class='Pstr_ji'>
+              积分：<text class='z'>{{item.pgoods_points}}</text>
+            </view>
+            <view class='Pstr_pirc'>
+              价格：<text>¥{{item.pgoods_price}}</text>
+            </view>
+        </navigator>
+    </view>
+</view>
+
+<view class='nctouch-norecord' wx:if="{{is_kong}}">
+<view class='norecord-ico'>
+  <image src='../../images/cart_w.png'></image>
+</view>
+<view class='cord_b'>
+    <view class='f_cord'>您的购物车还是空的</view>
+    <view class='b_cord'>去挑一些中意的商品吧</view>
+</view>
+
+<navigator url='../categroy/categroy' open-type="switchTab">随便逛逛</navigator>
+
+</view>

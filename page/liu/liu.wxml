@@ -1,0 +1,21 @@
+<view class='container'>
+  <view>配送方式：{{wu_data.express_name}}</view>
+  <view>订单编号：{{wu_data.shipping_code}}</view>
+</view>
+
+
+<view class="track-list">
+    <view class='ul'>
+       <view  wx:for="{{list}}"  class='li {{index<1? "first":""}}'>
+          <image class='node-icon' src='{{index<1? "../../images/order-icons_02.png":"../../images/an_03.png"}}'></image>
+          <!-- <text class='time z'>2016-03-10 18:07:15</text> -->
+          <view class='text {{index<1? "z":""}}'>{{item}}</view>
+       </view>
+
+     
+
+        
+    
+    </view>
+
+</view>

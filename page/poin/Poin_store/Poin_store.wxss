@@ -1,0 +1,155 @@
+#P_top {
+    height:143rpx;
+    line-height: 143rpx;
+    background-color: #ffffff;
+   
+}
+#P_top_l {
+    float: left;
+    margin-left: 39rpx;
+    font-size: 31rpx;
+}
+#P_top_l text {
+    font-size: 47rpx;
+    color: #d00100;
+}
+#P_top_l image{
+  width: 43rpx;
+  margin-right: 10rpx;
+}
+
+#P_top_r {
+    width: 204rpx;
+    height: 60rpx;
+    text-align: center;
+    line-height: 60rpx;
+    border: 2.5rpx solid #e4e4e4;
+    font-size: 30rpx;
+    color: #666666;
+    border-radius: 6.5rpx;
+    margin-top:35rpx;
+    float: right;
+    margin-right: 26rpx;
+}
+#P_top_r navigator{
+      display: block;
+    width: 100%;
+    height: 100%;
+    color: #666666;
+}
+#P_store_list{
+      overflow: hidden;
+    padding: 0 0.78%;
+    background-color: #f3f0f0;
+}
+.P_store_item{
+
+  float: left;
+    margin: 0 0.8% 0.26rem;
+    width: 48.4%;
+    box-sizing: border-box;
+    padding: 0 13rpx;
+    height: 590rpx;
+    background-color: #ffffff;
+}
+
+.Pstr_img {
+    height: 383rpx;
+}
+.Pstr_img image{
+  width: 100%;
+  height: 100%!important;
+}
+.Pstr_na{
+
+  font-size: 31rpx;
+    line-height: 46rpx;
+    height: 87rpx;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.Pstr_ji {
+    font-size: 30rpx;
+}
+
+
+.Pstr_ji text {
+    font-size:45rpx;
+  
+}
+.Pstr_pirc {
+    font-size: 30rpx;
+}
+.Pstr_pirc text {
+    font-size: 30rpx;
+    color: #a7a7a7;
+    text-decoration: line-through;
+}
+
+
+.nctouch-norecord {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    width: 500rpx;
+    height: 410rpx;
+    margin: -150rpx 0 0 -250rpx;
+    text-align: center;
+    font-size: 0;
+}
+.norecord-ico{
+
+  display: inline-block;
+    width: 110rpx;
+    height: 110rpx;
+    padding: 20rpx;
+    margin: 0 auto;
+    background-color: #DDD;
+    border-radius: 100%;
+}
+
+.norecord-ico image{
+  display: block;
+    width: 100%;
+    height: 100%;
+}
+.cord_b {
+    height: 137rpx;
+    margin-top: 37rpx;
+}
+.f_cord{
+      display: block;
+    height: 50rpx;
+    margin-bottom: 12rpx;
+    font-size: 38rpx;
+    line-height:50rpx;
+}
+.b_cord{
+  display: block;
+    height: 50rpx;
+    margin-bottom: 25rpx;
+    font-size: 28rpx;
+    line-height: 50rpx;
+    color: #999;
+}
+.nctouch-norecord navigator{
+
+  vertical-align: top;
+    display: inline-block !important;
+    height: 55rpx;
+    padding: 0 15rpx;
+    margin: 0 auto;
+    font-size: 30rpx;
+    color: #555 !important;
+    line-height: 55rpx;
+    text-align: center;
+    background-color: #FFF;
+    border: solid 1px #CCC;
+    border-radius: 8rpx;
+}
+

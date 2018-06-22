@@ -1,0 +1,154 @@
+
+
+<!-- 轮播图版 -->
+<template name="banner_m">
+  <swiper id='banner_swiper'autoplay="{{true}}" interval="4000">
+    <swiper-item wx:for="{{item}}">
+      <image src="{{item.image}}" mode="" />
+    </swiper-item>
+  </swiper>
+</template>
+
+ <!-- 模板布局a  -->
+ <template name="home1">
+ <view class='nctouch-home-block'>
+  <view class='tit-bar'>{{title}}</view>
+  <view class='item-pic'>
+    <navigator url='../details/details?goods_id={{data}}'>
+      <image src='{{image}}' mode='widthFix'></image>
+    </navigator>
+  </view>
+</view> 
+</template>
+<!-- 模板布局b  -->
+<template name="home2">
+    <view class='nctouch-home-block'>
+  <view class='tit-bar'>{{title}}</view>
+  <view class='item-pic-l1-r2'>
+    <view>
+      <navigator url='../details/details?goods_id={{square_data}}'>
+        <image mode='widthFix' src='{{square_image}}'></image>
+      </navigator>
+    </view>
+    <view>
+      <navigator url='../details/details?goods_id={{rectangle1_data}}'>
+        <image mode='widthFix' src='{{rectangle1_image}}'></image>
+      </navigator>
+    </view>
+    <view>
+      <navigator url='../details/details?goods_id={{rectangle2_data}}'>
+        <image mode='widthFix' src='{{rectangle2_image}}'></image>
+      </navigator>
+    </view>
+  </view>
+</view>
+</template>
+
+
+
+
+
+
+
+<!-- 模板布局c -->
+<template name="home3">
+ <view class='nctouch-home-block'>
+  <view class='tit-bar'>{{title}}</view>
+  <view class='item-pic-list'>
+    <view wx:for="{{item}}">
+      <navigator url='../details/details?goods_id={{item.data}}'>
+        <image mode='widthFix' src='{{item.image}}'></image>
+      </navigator>
+    </view>
+  </view>
+</view> 
+</template>
+
+
+
+
+
+<!-- 商品模块 -->
+<template name="goods">
+ <view class='nctouch-home-block item-goods'>
+   <view class='tit-bar'>{{title}}</view> 
+  <view class='sul goods-list'>
+    <view class='sli' wx:for="{{item}}"  wx:for-item="itemName">
+      <navigator url='../details/details?goods_id={{itemName.goods_id}}'>
+        <view class='goods-pic'>
+          <image src='{{itemName.goods_image}}' mode='widthFix'></image>
+        </view>
+        <view class='sdl goods-info'>
+          <view class='sdt goods-name'>{{itemName.goods_name}}</view>
+          <view class='sdd goods-price'>￥
+            <text>{{itemName.goods_promotion_price}}</text>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view> 
+</template>
+
+
+
+
+<!-- 限时商品模块 -->
+<template name="goods1">
+   <view class='nctouch-home-block item-goods'>
+  <view class='tit-bar'>{{title}}</view>
+  <view class='sul goods-list'>
+    <view class='sli' wx:for="{{item}}">
+      <view class='dz'>打折</view>
+      <navigator url='../details/details?goods_id={{item.goods_id}}'>
+        <view class='goods-pic'>
+          <image src='{{item.goods_image}}' mode='widthFix'></image>
+        </view>
+        <view class='sdl goods-info'>
+          <view class='sdt goods-name'>{{item.goods_name}}</view>
+          <view class='sdd goods-price'>￥
+            <text>{{item.goods_promotion_price}}</text>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view> 
+</template>
+
+<!-- 抢购模板 -->
+<template name="goods2">
+ <view class='nctouch-home-block'>
+  <view class='tit-bar'>
+    <view id='Time_'>
+      <view id='t_f'>限时抢购</view>
+      <view id='ji_time'>
+        <view>{{shi_data}}</view>
+        <text>:</text>
+        <view>{{feng_data}}</view>
+        <text>:</text>
+        <view>{{miao_data}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='nctouch-home-block item-goods'>
+    <view class='imgbar_1'></view>
+    <view class='sul goods-list'>
+      <view class='sli' wx:for="{{item}}">
+        <view class='dz'>抢购</view>
+        <navigator url='../details/details?goods_id={{item.goods_id}}'>
+          <view class='goods-pic'>
+            <image src='{{item.goods_image}}' mode='widthFix'></image>
+          </view>
+          <view class='sdl goods-info'>
+            <view class='sdt goods-name'>{{item.goods_name}}</view>
+            <view class='sdd goods-price'>￥
+              <text>{{item.goods_promotion_price}}</text>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view> 
+</template>

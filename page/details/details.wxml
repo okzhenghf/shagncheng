@@ -1,0 +1,187 @@
+<swiper id='banner_details' autoplay="{{true}}" indicator-dots="{{true}}">
+
+
+  <swiper-item wx:for="{{lun_image}}" wx:key="{{index}}">
+    <image src="{{m_tp+'/'+ item.pic_cover_small}}" mode="widthFix" />
+  </swiper-item>
+
+  <!-- <swiper-item>
+    <image src="../../images/banner1.jpg" mode="widthFix" />
+  </swiper-item>
+  <swiper-item>
+    <image src="../../images/banner2.jpg" mode="widthFix" />
+  </swiper-item>
+  <swiper-item>
+    <image src="../../images/banner3.jpg" mode="widthFix" />
+  </swiper-item> -->
+</swiper>
+
+<template name="tmp_data">
+  <rich-text nodes="{{content}}"></rich-text>
+</template>
+<!-- 限时折扣的商品提示 -->
+<!-- <view id='tip_time'>
+  <view id='tip_wen'>限时抢购</view>
+  <view id='time_r'>
+    距结束仅剩 17 时 56 分 10 秒
+  </view>
+</view> -->
+<!-- 商品描述 -->
+<view id='shop_details'>
+  <view id='goods_name'>{{goods_info.goods_name}}</view>
+  <view id='price'>
+    <view id='x_price' wx:if="{{!goods_info.promotion_type}}">
+      <text>¥</text>{{goods_info.promotion_price}}
+    </view>
+
+    <view id='x_price' wx:if="{{goods_info.promotion_type}}">
+      <text>¥</text>{{goods_info.promotion_price}}
+    </view>
+
+
+    <view id='y_price'>
+      <text>¥</text>{{goods_info.price}}
+    </view>
+  </view>
+
+  <!-- 优惠 -->
+  <view>
+    <view class='hui_tip' wx:if="{{goods_info.promotion_type == 'groupbuy'}}">
+      抢购
+    </view>
+    <view class='hui_tip' wx:elif="{{ goods_info.promotion_type == 'xianshi'}}">
+      限时折扣
+    </view>
+    <view class='hui_tip' wx:elif="{{ goods_info.shipping_fee_name == '免邮'}}">
+      免邮
+    </view>
+    <view class='hui_tip' wx:else="{{ goods_info.promotion_type == 'sole'}}">
+      手机专享
+    </view>
+
+
+
+    <!-- <view class='hui_tip'>包邮</view> -->
+    <!-- <view class="jsong z">满既送</view>  -->
+
+
+  </view>
+  <!-- 数量 -->
+  <view id='goods_nub'>
+    <view>
+      数量
+    </view>
+    <view id='range_'>
+      <view class='r_btn' id='De_down' bindtap='downNub'>-</view>
+      <view id='nub'>{{nub}}</view>
+      <view class='r_btn' id='De_add' bindtap='addNub'>+</view>
+    </view>
+
+
+  </view>
+  <view id='sk'>
+    <view   wx:for="{{ku_list}}"  class='{{item.chk==true? "sku":""}}' wx:if='{{item.sku_name.length!=0}}' bindtap='get_skuid'  data-index='{{index}}' data-sid='{{item.sku_id}}'>
+      {{item.sku_name}}
+    </view>
+  
+
+
+  </view>
+
+</view>
+<view class='ge'></view>
+<!-- 详情与评价 -->
+<view id='title_btn'>
+  <view bindtap='xq'>
+    <text class='{{pj==true? "ck":""}}'>商品详情</text>
+  </view>
+  <view bindtap='pj'>
+    <text class='{{pj==false? "ck":""}}'>商品评价</text>
+  </view>
+</view>
+
+<!-- 详情部分 -->
+<view id='xq_container' wx:if="{{pj}}">
+  <!-- <image src='../../images/xq.jpg' mode='widthFix'></image> -->
+
+  <template is="tmp_data" data="{{...image_info}}"></template>
+
+</view>
+
+<!-- 评价部分 -->
+<!-- <view class='ge' id='bge' wx:if="{{!pj}}" hidden='{{is_kong}}'></view> -->
+<view id='product_evaluation_html' class='product-eval-list' wx:if="{{!pj}}">
+  <view wx:if="{{is_kong}}" class='kong'>该商品还未添加任何评论...</view>
+  <view class='eval_item' wx:for="{{goods_eval_list}}" wx:for-item="itemlist">
+    <view class='eval-user'>
+      <view class='user-avatar'>
+        <image src='{{itemlist.user_img==0? "../../images/tx.gif" : m_tp+"/"+ itemlist.user_img}}'></image>
+      </view>
+      <text class='user-name'>{{itemlist.member_name}}</text>
+      <view class='goods-raty'>
+        <image wx:for='{{itemlist.scores}}' src='../../images/star_r.png' mode='widthFix'></image>
+      </view>
+
+
+
+
+
+
+      <view class='timer'>{{itemlist.addtime}}</view>
+    </view>
+    <view class='eval-con'>
+      <view class='p_text'>{{itemlist.content}}</view>
+      <view class='goods_geval'>
+
+        <navigator wx:for="{{itemlist.img_arr}}" wx:for-item="itemimage">
+          <image mode='widthFix' src='{{itemimage}}' data-img='{{itemimage}}' data-arr='{{itemlist.img_arr}}' bindtap='lool_img'></image>
+        </navigator>
+
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+
+
+<!-- 底部固定部分 -->
+<view class='cart-concern-btm-fixed'>
+  <view class='otreh-handle'>
+    <view class='pd-collect' bindtap='toggel_coll'>
+      <view>
+        <image src='{{is_favorate==true?"../../images/favorite_rs.png":"../../images/favorite_r.png"}}' mode='widthFix'></image>
+      </view>
+      <view>收藏</view>
+    </view>
+    <navigator class='cart' open-type="switchTab" url='../shopcar/shopcar'>
+      <view>
+        <image src='../../images/cart_b.png' mode='widthFix'></image>
+      </view>
+      <view>购物车</view>
+      <text class='car_count' wx:if="{{car_count}}">{{car_count}}</text>
+    </navigator>
+  </view>
+
+  <view class='buy-handle' wx:if="{{goods_info.stock!=0}}">
+    <view class='add-cart' bindtap='add_car'>
+      加入购物车
+    </view>
+
+    <navigator hidden='{{key==""}}' class='buy-now z' url='../order/order_table/order_table?goods_id={{goods_info.goods_id}}&buynum={{nub}}'>立即购买</navigator>
+    <navigator wx:if='{{key==""}}' bindtap='show_ld' class='buy-now z'>立即购买</navigator>
+  </view>
+
+
+
+  <view class='buy-handle on_buy' wx:if="{{goods_info.stock==0}}">
+    <view class='add-cart'>
+      加入购物车
+    </view>
+    <navigator class='buy-now z'>立即购买</navigator>
+  </view>
+
+
+
+</view>

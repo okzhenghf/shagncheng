@@ -1,0 +1,355 @@
+.nctouch-cart-add-default{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+
+}
+.nctouch-cart-add-default navigator{
+    color: #555;
+    display: block;
+    overflow: hidden;
+}
+
+.nctouch-cart-add-default image.icon-add {
+    position: absolute;
+    z-index: 1;
+    top: 25rpx;
+    left: 25rpx;
+    display: block;
+    width: 40rpx;
+    height: 45rpx;
+}
+#address_info{
+    margin: 0 0 0 80rpx;
+    padding: 25rpx 0;
+
+}
+#shou_ren{
+    display: block;
+    height: 45rpx;
+    font-size: 35rpx;
+    line-height: 45rpx;
+}
+.nctouch-cart-add-default  text{
+    margin-left: 15rpx;
+    /* font-weight: 600; */
+}
+.nctouch-cart-add-default #address_{
+    display: block;
+    min-height: 45rpx;
+    max-height: 80rpx;
+    font-size: 30rpx;
+    line-height: 45rpx;
+
+}
+#address_ text{
+  font-size: 24rpx;
+}
+.icon-arrow{
+
+  position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: 25rpx;
+    display: block;
+    width: 25rpx;
+    height: 25rpx;
+    margin-top: -12.5rpx;
+    
+    opacity: 0.5;
+}
+.bge{
+  background-color: #F5F5F5;
+  height: 25rpx;
+  
+}
+#fa_info navigator{
+ height: 95rpx;
+    box-sizing: border-box;
+ display: block;
+    overflow: hidden;
+    
+}
+.posr{
+    position: relative !important;
+  
+}
+
+#fa_info .h3{
+    position: absolute;
+    z-index: 1;
+    top: 20rpx;
+    left: 25rpx;
+    display: block;
+    width: 250rpx;
+    height: 50rpx;
+    font-size: 35rpx;
+    line-height: 50rpx;
+    color: #555;
+}
+
+#fa_info .h3 image {
+    display: inline-block;
+    vertical-align: middle;
+    width: 45rpx;
+    height: 45rpx;
+    margin-right: 5rpx;
+    opacity: 0.7;
+}
+#fa_info .current-con{
+  display: block;
+    margin: 0 75rpx 0 300rpx;
+    padding: 25rpx 0;
+    text-align: right;
+    font-size: 30rpx;
+    color: #333;
+    font-weight: 600;
+}
+.nctouch-cart-container{
+
+      display: block;
+    clear: both;
+    background-color: #FFF;
+    margin-bottom: 25rpx;
+    border: solid #EEE;
+    border-width: 2.5rpx;
+}
+.gin_tit{
+  font-size: 35rpx;
+    color: #747474;
+    padding-left: 25rpx;
+    height: 85rpx;
+    line-height: 85rpx;
+    border-bottom: 1.5rpx solid #E4E4E4;
+}
+.nctouch-cart-item{
+
+      border-bottom: solid 2.5rpx #EEE;
+}
+.nctouch-cart-item .buy-item:last-child {
+    border: none;
+}
+
+.nctouch-cart-item .buy-item {
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin-left: 25rpx;
+    padding: 25rpx 0;
+    border-bottom: solid #EEE 2.5rpx;
+}
+
+.nctouch-cart-item .buy-item .goods-pic {
+    display: block;
+    width: 155rpx;
+    height: 155rpx;
+    position: absolute;
+    z-index: 1;
+    top: 25rpx;
+    left: 0;
+    border: solid 2.5rpx #EEE;
+    border-radius: 10rpx;
+}
+
+.nctouch-cart-item .buy-item .goods-pic navigator{
+  display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.nctouch-cart-item .buy-item .goods-pic navigator image {
+    width: 100%;
+    height: 100%;
+    border-radius: 20rpx;
+}
+.nctouch-cart-item .buy-item .goods-info{
+    display: block;
+    vertical-align: top;
+    height: 110rpx;
+    margin: 0 25rpx 0 175rpx;
+    position: relative;
+    z-index: 1;
+}
+.nctouch-cart-item .buy-item .goods-info.goods-name navigator {
+    display: block;
+    height: 70rpx;
+    font-size: 30rpx;
+    color: #111;
+    line-height: 35rpx;
+    overflow: hidden;
+}
+.nctouch-cart-item .buy-item .goods-info .goods-type {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 70%;
+    height: 45rpx;
+    font-size: 22rpx;
+    line-height:45rpx;
+    color: #999;
+    text-overflow: ellipsis;
+}
+
+
+.nctouch-cart-item .buy-item .goods-subtotal {
+    display: block;
+    height: 50rpx;
+    margin: 0 25rpx 0 175rpx;
+    line-height: 50rpx;
+    font-size: 30rpx;
+    position: relative;
+    z-index: 1;
+}
+
+.nctouch-cart-item .buy-item .goods-subtotal .goods-price {
+    color: #fa4e51;
+    font-size: 30rpx;
+    font-weight: 600;
+}
+.nctouch-cart-item .buy-item .goods-subtotal .goods-price .small_y{
+  font-size: 27rpx;
+}
+
+.nctouch-cart-item .buy-item .goods-num {
+    font-size: 25rpx;
+    line-height: 50rpx;
+    position: absolute;
+    z-index: 1;
+    top: 135rpx;
+    right:50rpx;
+}
+.nctouch-cart-item .buy-item .goods-num text {
+    font-size: 30rpx;
+    font-weight: 600;
+    margin: 0 10rpx;
+}
+.nctouch-cart-subtotal .wl{
+    position: relative;
+    z-index: 1;
+    height: 50rpx;
+    padding: 20rpx 0 0;
+    font-size: 0;
+}
+.wl_left{
+    position: absolute;
+    z-index: 1;
+    top: 20rpx;
+    left: 20rpx;
+    display: block;
+    width: 50%;
+    height: 50rpx;
+    font-size: 30rpx;
+    line-height: 50rpx;
+}
+.wl_right{
+
+  height: 50rpx;
+    margin: 0 25rpx 0 50%;
+    text-align: right;
+    font-size:30rpx;
+    line-height: 50rpx;
+}
+.wl_right text{
+ color: #fa4e51;
+}
+
+
+
+.nctouch-cart-subtotal .message{
+  position: relative;
+    z-index: 1;
+    display: block;
+    height:80rpx;
+    padding-top: 20rpx;
+}
+.nctouch-cart-subtotal .message input[type="text"] {
+    display: block;
+    width: 91%;
+    height:45rpx;
+    padding: 2%;
+    margin: 0 2.5%;
+    background-color: #F0F0F0;
+    border: none;
+    border-radius: 10rpx;
+    line-height: 45rpx;
+    font-size: 30rpx;
+}
+
+.nctouch-cart-subtotal .store-total {
+    padding: 25rpx;
+    text-align: right;
+    font-size: 30rpx;
+    line-height:45rpx;
+}
+.store-total text{
+  font-weight: bold;
+   color: #fa4e51;
+}
+.z{
+   color: #fa4e51!important;
+}
+.b{
+  background-color:#fa4e51!important; 
+}
+
+.nctouch-cart-bottom{
+  position: fixed;
+    z-index: 1;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 112rpx;
+     background-color: rgba(255,255,255,0.85); 
+    /* background-color: red; */
+    border-top: solid 2.5rpx #EEE;
+}
+.nctouch-cart-bottom .total {
+    display: block;
+    float: left;
+    text-align: right;
+    width: 75%;
+}
+
+
+  .nctouch-cart-bottom .total-money {
+    height: 50rpx;
+    margin-right:50rpx;
+    padding: 25rpx 0;
+    font-size: 0;
+    line-height: 50rpx;
+}
+.zong{
+      display: inline-block;
+    font-size: 30rpx;
+}
+
+.nctouch-cart-bottom .total-money .nub{
+display: inline-block;
+    font-size: 27rpx;
+    color: #DB4453;
+    font-weight: 600;
+}
+
+.nctouch-cart-bottom .total-money  text{
+    font-size: 45rpx;
+}
+
+  .nctouch-cart-bottom .check-out {
+    display: block;
+    float: right;
+    width: 25%;
+    height: 111rpx;
+    background-color: #BBB;
+}
+
+.nctouch-cart-bottom .check-out navigator {
+    color: #fff;
+    display: block;
+    text-align: center;
+    font-size: 40rpx;
+    line-height: 112rpx;
+}
+.nctouch-cart-subtotal{
+  margin-bottom: 112rpx!important;
+}
+

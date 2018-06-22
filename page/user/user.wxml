@@ -1,0 +1,352 @@
+<view class="member-top ">
+  <view class='member-info' wx:if="{{key}}">
+    
+        <view class='user-avatar'>
+       <image src='{{ user_image||"../../images/tx.gif"}}'></image> 
+    </view>
+    <view class='user-name'>{{user_name||"登录"}}</view>
+    
+    
+
+  </view>
+
+
+ <view class='member-info' wx:if="{{key==false}}">
+    <button open-type='getUserInfo' bindgetuserinfo="login_">
+        <view class='user-avatar'>
+       <image src='../../images/tx.gif'></image> 
+    </view>
+    <view class='user-name'>{{st}}</view>
+    </button>
+  </view>
+
+
+  <view class='member-collect' wx:if="{{key!=false}}">
+    <view class='collect_item'>
+      <navigator url='../collect/collect'>
+        <text>{{collec_nb}}</text>
+        <view>商品收藏</view>
+      </navigator>
+    </view>
+
+    <view class='collect_item'>
+      <navigator url='../poin/Poin_list/Poin_list'>
+        <text>{{poin_}}</text>
+        <view>可用积分</view>
+      </navigator>
+    </view>
+  </view>
+
+
+
+   <view class='member-collect' wx:if="{{key==false}}">
+    <view class='collect_item'  bindtap='tip_login'>
+      <navigator   bindtap='tip_login'>
+        <text>0</text>
+        <view>商品收藏</view>
+      </navigator>
+    </view>
+
+    <view class='collect_item'  bindtap='tip_login'>
+      <navigator  bindtap='tip_login'>
+        <text>0</text>
+        <view>可用积分</view>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+<view class='member-center' wx:if="{{key!=false}}">
+  <view class='mt5 me_item'>
+    <view class='me_top'>
+      <navigator url='../order_list/order_list'>
+        <view class='me_left'>
+          <image src='../../images/mc_01.png'></image>
+          <text>我的订单</text>
+        </view>
+        <view class='me_right'>
+          查看全部订单
+          <image class='r_icon' src='../../images/arrow_right_b.png'></image>
+        </view>
+      </navigator>
+    </view>
+
+    <view class='me_bottom'>
+      <view class='order_item'>
+        <navigator url='../order_list/order_list?status=s1&state=state_new'>
+          <image src='../../images/mcc_01.png'></image>
+          <view>待付款</view>
+        </navigator>
+      </view>
+
+      <view class='order_item'>
+        <navigator url='../order_list/order_list?status=s3&state=state_send'>
+          <image src='../../images/mcc_03.png'></image>
+          <view>已发货</view>
+        </navigator>
+      </view>
+
+
+      <view class='order_item'>
+        <navigator url='../order_list/order_list?status=s2&state=state_pay'>
+          <image src='../../images/mcc_02.png'></image>
+          <view>待发货</view>
+        </navigator>
+      </view>
+
+      <view class='order_item'>
+        <navigator url='../order_list/order_list?status=s4&state=state_noeval'>
+          <image src='../../images/mcc_04.png'></image>
+          <view>待评价</view>
+        </navigator>
+      </view>
+
+
+      <view class='order_item'>
+        <navigator url='../refund/refund'>
+          <image src='../../images/mcc_05.png'></image>
+          <view>退款/退货</view>
+        </navigator>
+      </view>
+
+
+
+    </view>
+  </view>
+
+  <view class='mt5 me_item'>
+    <view class='item_'>
+      <navigator url='../order_list/order_list?status=s4&state=state_noeval'>
+        <view class='me_left'>
+          <text>评论晒单</text>
+        </view>
+        <view class='me_right'>
+
+          <image class='r_icon' src='../../images/arrow_right_b.png'></image>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class='mt5 me_item'>
+    <view class='item_'>
+      <navigator url='../order/order_address_list/order_address_list'>
+        <view class='me_left'>
+          <text>收货地址</text>
+        </view>
+        <view class='me_right'>
+          <image class='r_icon' src='../../images/arrow_right_b.png'></image>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class='mt5 me_item'>
+    <view class='item_'>
+      <navigator url='../poin/Poin_list/Poin_list'>
+        <view class='me_left'>
+          <text>我的积分</text>
+        </view>
+        <view class='me_right'>
+
+          <image class='r_icon' src='../../images/arrow_right_b.png'></image>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class='mt5 me_item'>
+    <view class='item_'>
+      <navigator url='../collect/collect'>
+        <view class='me_left'>
+          <text>我的收藏</text>
+        </view>
+        <view class='me_right'>
+          <image class='r_icon' src='../../images/arrow_right_b.png'></image>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class='mt5 me_item'>
+    <view class='item_'>
+      <navigator url='../voucher_list/voucher_list'>
+        <view class='me_left'>
+          <text>我的优惠卷</text>
+        </view>
+        <view class='me_right'>
+          <image class='r_icon' src='../../images/arrow_right_b.png'></image>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <!-- <view class='mt5 me_item'>
+    <view class='item_'>
+      <navigator url='../poin/Poin_store/Poin_store'>
+        <view class='me_left'>
+          <text>积分商城</text>
+        </view>
+        <view class='me_right'>
+          <image class='r_icon' src='../../images/arrow_right_b.png'></image>
+        </view>
+      </navigator>
+    </view>
+  </view> -->
+</view>
+
+
+
+<view class='member-center' wx:if="{{key==false}}">
+  <view class='mt5 me_item' bindtap='tip_login'>
+    <view class='me_top'>
+      <navigator>
+        <view class='me_left'>
+          <image src='../../images/mc_01.png'></image>
+          <text>我的订单</text>
+        </view>
+        <view class='me_right'>
+          查看全部订单
+          <image class='r_icon' src='../../images/arrow_right_b.png'></image>
+        </view>
+      </navigator>
+    </view>
+
+    <view class='me_bottom' bindtap='tip_login'>
+      <view class='order_item'>
+        <navigator>
+          <image src='../../images/mcc_01.png'></image>
+          <view>待付款</view>
+        </navigator>
+      </view>
+
+      <view class='order_item' bindtap='tip_login'>
+        <navigator>
+          <image src='../../images/mcc_03.png'></image>
+          <view>已发货</view>
+        </navigator>
+      </view>
+
+
+      <view class='order_item' bindtap='tip_login'>
+        <navigator>
+          <image src='../../images/mcc_02.png'></image>
+          <view>待发货</view>
+        </navigator>
+      </view>
+
+      <view class='order_item' bindtap='tip_login'>
+        <navigator>
+          <image src='../../images/mcc_04.png'></image>
+          <view>待评价</view>
+        </navigator>
+      </view>
+
+
+      <view class='order_item' bindtap='tip_login'>
+        <navigator>
+          <image src='../../images/mcc_05.png'></image>
+          <view>退款/退货</view>
+        </navigator>
+      </view>
+
+
+
+    </view>
+  </view>
+
+  <view class='mt5 me_item' bindtap='tip_login'>
+    <view class='item_'>
+      <navigator>
+        <view class='me_left'>
+          <text>评论晒单</text>
+        </view>
+        <view class='me_right'>
+
+          <image class='r_icon' src='../../images/arrow_right_b.png'></image>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class='mt5 me_item' bindtap='tip_login'>
+    <view class='item_'>
+      <navigator>
+        <view class='me_left'>
+          <text>收货地址</text>
+        </view>
+        <view class='me_right'>
+          <image class='r_icon' src='../../images/arrow_right_b.png'></image>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class='mt5 me_item' bindtap='tip_login'>
+    <view class='item_'>
+      <navigator>
+        <view class='me_left'>
+          <text>我的积分</text>
+        </view>
+        <view class='me_right'>
+
+          <image class='r_icon' src='../../images/arrow_right_b.png'></image>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class='mt5 me_item' bindtap='tip_login'>
+    <view class='item_'>
+      <navigator>
+        <view class='me_left'>
+          <text>我的收藏</text>
+        </view>
+        <view class='me_right'>
+          <image class='r_icon' src='../../images/arrow_right_b.png'></image>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class='mt5 me_item' bindtap='tip_login'>
+    <view class='item_'>
+      <navigator>
+        <view class='me_left'>
+          <text>我的优惠卷</text>
+        </view>
+        <view class='me_right'>
+          <image class='r_icon' src='../../images/arrow_right_b.png'></image>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+
+
+  <!-- <view class='mt5 me_item' bindtap='tip_login'>
+    <view class='item_'>
+      <navigator>
+        <view class='me_left'>
+          <text>积分商城</text>
+        </view>
+        <view class='me_right'>
+          <image class='r_icon' src='../../images/arrow_right_b.png'></image>
+        </view>
+      </navigator>
+    </view>
+  </view> -->
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+

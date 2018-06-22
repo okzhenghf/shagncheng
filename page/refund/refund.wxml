@@ -1,0 +1,58 @@
+<view class='top'>
+  <view class='header-tab'>
+  <navigator class='z' url='../refund/refund'>退款列表</navigator>
+  <navigator  url='../return/return'>退货列表</navigator>
+
+</view>
+</view>
+<view class="refund-list">
+  <view  wx:for="{{data_list}}"  class='list_item  {{index>0? "mt10":""}}'   wx:for-item="t1" wx:key="{{item.order_id}}">
+    <view class='nctouch-order-item'>
+      <view class='nctouch-order-item-head'>
+        <navigator class='store'>
+          <image src='../../images/store_b.png' mode='widthFix'></image>
+          {{t1.store_name}}
+        </navigator>
+        <text class='state z'>{{t1.seller_state}}</text>
+      </view>
+
+      <view class='nctouch-order-item-con'>
+        <view class='goods-block' wx:for="{{t1.goods_list}}" wx:for-item="t2" >
+          <navigator url='../return_info/return_info?refund_id={{t1.refund_id}}'>
+            <view class='goods-pic'>
+              <image src='{{t2.goods_img_360}}' mode='widthFix'></image>
+            </view>
+            <view class='goods-info'>
+              <view class='goods-name'>{{t2.goods_name}}</view>
+            </view>
+          </navigator>
+
+        </view>
+
+      </view>
+
+      <view class='nctouch-order-item-footer'>
+        <view class='store-totle'>
+          <view class='refund-time'>{{t1.add_time}}</view>
+          <text class='refund-sum'>退款金额：<text class='z chu'>￥{{t1.refund_amount}}</text></text>
+        
+        </view>
+      
+        <view class='handle'>
+          <navigator url='../return_info/return_info?refund_id={{t1.refund_id}}'>退款详情</navigator>
+        </view>
+
+      </view>
+
+
+
+    </view>
+
+  <view class='btn b mb' data-zbuy='{{t1.goods_arr}}' bindtap='again_buy'>再次购买</view>
+
+  </view>
+
+
+
+
+</view>

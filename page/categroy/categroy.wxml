@@ -1,0 +1,21 @@
+<view class="all_fen" hidden='{{is_loadding}}'>
+  <view class='head_sorting'>
+
+
+
+
+    <view class='sorting_item' wx:for="{{one_class}}" wx:key="{{index}}">
+      <view class='sor_tit' bindtap='show_all' data-gcid="{{item.category_id}}" data-index="{{index}}">{{item.category_name}}
+        <image src='../../images/pb_03.jpg' bindtap='show_all' data-gcid="{{item.category_id}}" data-index="{{index}}"></image>
+      </view>
+      <view class='Zi_list {{toggle_show==index? "h":""}}'>
+        <view class='zi_item' wx:for="{{child_class}}" wx:key="{{item.category_id}}">
+          <navigator url='../product_list/product_list?gc_id={{item.category_id}}'>{{item.category_name}}</navigator>
+        </view>
+      </view>
+    </view>
+
+
+
+  </view>
+</view>

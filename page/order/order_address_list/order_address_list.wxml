@@ -1,0 +1,23 @@
+<view class="address_list" wx:for="{{address_data}}">
+
+  <view class='address_item' bindtap='set_address'  data-index='{{item.id}}'>
+    <view class='mo z'  wx:if="{{item.is_default==1}}" data-index='{{item.id}}'>默认</view>
+    <view class='it_top' data-index='{{item.id}}'>
+      <text data-index='{{item.id}}'>{{item.consigner}}</text>,
+      <text data-index='{{item.id}}'>{{item.mobile}}</text>
+    </view>
+    <view class='it_bottom' data-index='{{item.id}}'>
+      <text data-index='{{item.id}}'>{{item.address_info}}</text>    
+      <text data-index='{{item.id}}'>{{item.address}}</text>
+    </view>
+  </view>
+
+
+</view>
+<!-- 添加地址 -->
+
+<view class='add_address b'>
+  <navigator url='../order_address_add/order_address_add'>新增收货地址</navigator>
+</view>
+
+<!-- 遮罩层 -->

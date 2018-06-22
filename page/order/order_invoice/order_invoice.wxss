@@ -1,0 +1,182 @@
+.p_hmarg{
+   display: block;
+    background: #FFF;
+    padding:10rpx 20rpx;
+}
+.piao_head view:first-child{
+    font-size: 36rpx;
+}
+.piao_head view:last-child{
+    font-size: 26rpx;
+}
+.z{
+   color: #fa4e51!important;
+}
+.b{
+  background-color:#fa4e51!important; 
+}
+.p_hmarg .tit {
+    display: block;
+    padding: 25rpx 0;
+    font-size: 35rpx;
+    line-height: 45rpx;
+}
+.inv_style{
+  
+    display: inline-block;
+    height: 45rpx;
+    padding: 12.5rpx  25rpx;
+    margin: 15rpx 15rpx 0 0;
+    font-size:27rpx;
+    color: #414141;
+    line-height: 56rpx;
+    background: #FFF;
+    border: solid 0.05rem #BBB;
+    border-radius: 7.5rpx;
+
+}
+.inv_style.cur{
+ background-color:#fa4e51!important; 
+  border: 1px solid #fa4e51;
+ 
+  color: #ffffff;
+}
+.cur{
+ background-color:#fa4e51!important; 
+  color: #ffffff;
+  border: 1px solid #fa4e51;
+}
+.btn{
+  width: 90%;
+  height: 95rpx;
+  text-align: center;
+  line-height: 95rpx;
+  font-size: 34rpx;
+  margin: 0 auto;
+  color:#fff;
+  border-radius: 8rpx;
+    margin-top: 40rpx;
+
+}
+.bge{
+  background-color: #F5F5F5;
+  height: 25rpx;
+  
+}
+.piao_{
+  margin-top: 20rpx;
+}
+.invoiceNew{
+
+      position: relative;
+    z-index: 1;
+    display: block;
+    height: 45rpx;
+    padding: 25rpx 0;
+    margin: 0 25rpx;
+    font-size: 30rpx ;
+    line-height: 45rpx;
+    border-bottom: solid 0.05rem #EEE;
+}
+
+.i_yuan{
+    position: relative;
+    display: inline-block;
+    width: 37.5rpx;
+    height: 37.5rpx;
+    margin-right: 10rpx;
+    background-color: #F5F5F5;
+    border: 2.5rpx solid #CCC;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    vertical-align: middle;
+
+}
+.zi_{
+
+font-size: 30rpx;
+
+}
+.invoice_Type{
+     margin:0 25rpx;
+    clear: both;
+    border-bottom: 1px solid #e4e4e4;
+    height: 130rpx;
+    
+    
+}
+.type_titl{
+      line-height: 130rpx;
+    font-size: 35rpx;
+    width: 150rpx;
+    color: #444;
+    float: left;
+    text-align: right;
+}
+.btn_style{
+float: left;
+ 
+
+}
+.btn_style view{
+float: left;
+margin-top: 30rpx;
+margin-left: 40rpx;
+vertical-align: top;
+padding: 14rpx 26rpx !important;
+border-radius: 7rpx !important;
+border: 1px solid #e4e4e4;
+}
+.sel_style{
+  float: left;
+   width: 70%;
+    line-height: 130rpx;
+}
+.sel_style view{
+  line-height: 130rpx;
+  margin-left: 40rpx;
+  height: 130rpx;
+ 
+}
+.invoice_Type image{
+  width: 48.7rpx;
+  height: 48.7rpx;
+  vertical-align: middle;
+  margin-top: 30rpx;
+}
+
+
+.info_{
+
+padding: 20rpx;
+margin-bottom: 10rpx;
+
+}
+.zhi_{
+    display: inline-block;
+    width: 160rpx;
+    /* background-color: red; */
+    font-size: 34rpx;
+    margin-left: 10rpx;
+}
+.info_item input{
+   display: inline-block;
+   font-size: 34rpx;
+   vertical-align: text-top;
+   /* color: #e4e4e4 */
+}
+.info_item{
+  padding: 20rpx 0 30rpx 0;
+  border-bottom: 2rpx solid #e4e4e4;
+  margin:0 20rpx 20rpx 20rpx;
+}
+.d{
+  color: #bcbbbb;
+}
+
+
+
+
+
+
+

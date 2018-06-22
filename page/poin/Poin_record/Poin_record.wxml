@@ -1,0 +1,37 @@
+<view class="order-list">
+  <view class='order_item' wx:for="{{data_list}}">
+    <view>
+      <view class='li_con'>
+        <!-- <view class='order_image'>
+          <image src='{{item.point_goodsimage_small}}' mode='widthFix'></image>
+        </view> -->
+
+        <view class='order_name'>
+          <view>{{item.text}}</view>
+          <view>{{item.create_time}}</view>
+        </view>
+
+        <view class='order_ran'>
+          <view class='jif z'>￥{{item.number}}</view>
+          <view></view>
+          <view class='status_order'>{{item.point_orderstatetext}}</view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>
+
+
+<view class='nctouch-norecord' wx:if="{{is_kong}}">
+<view class='norecord-ico'>
+  <image src='../../../images/search_w.png'></image>
+</view>
+<view class='cord_b'>
+    <view class='f_cord'>您还没有兑换记录</view>
+    <view class='b_cord'>去挑一些中意的商品吧</view>
+</view>
+
+<navigator url='../Poin_store/Poin_store' >随便逛逛</navigator>
+
+</view>

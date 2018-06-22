@@ -1,0 +1,52 @@
+.sorting_item{
+      font-size: 35.5rpx;
+}
+.sor_tit{
+    padding-left: 7.8%;
+    line-height: 115rpx;
+    border-bottom: 1px solid #e4e4e4;
+    /* background: url(../images/hjimage/pb_03.jpg) no-repeat 90.3% center #ffffff; */
+    /* background-size: 0.8rem 0.44rem; */
+    position: relative;
+}
+.sor_tit image{
+  width: 40rpx;
+  height: 22rpx;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10%;
+}
+.zi_item{
+      height:130rpx;
+font:39.5rpx/130rpx "宋体";
+padding-left:12.5%;
+background-color:#fdfaf3;
+
+}
+.zi_item navigator{
+      color: #333333;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.Zi_list{
+  height: 0;
+  overflow: hidden;
+  transition: all 1s;
+}
+.h{
+  height: auto!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+

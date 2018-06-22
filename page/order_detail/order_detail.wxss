@@ -1,0 +1,299 @@
+.order-info-container{
+  /* padding-bottom: 13rpx; */
+      display: block;
+    clear: both;
+    width: 100%;
+}
+
+.order-info-container>view{
+      border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+}
+#ord_time {
+    margin-bottom: 25rpx;
+}
+.nctouch-oredr-detail-block {
+    overflow: hidden;
+}
+.nctouch-oredr-detail-block {
+    position: relative;
+    z-index: 1;
+    display: block;
+    padding: 20rpx 0;
+    background: #FFF;
+    
+}
+.mt5 {
+    margin-top: 25rpx !important;
+}
+page{
+  background-color: #f5f5f5;
+}
+.order-log view{
+      margin-left: 20rpx;
+    /* font-weight: bold; */
+    font-size: 30rpx;
+    line-height: 65rpx;
+        display: block;
+    /* color: #999; */
+}
+.zs{
+  font-size: 28rpx;
+  float: right;
+}
+
+.nctouch-oredr-detail-block .h3 {
+    display: inline-block;
+    vertical-align: top;
+    height: 50rpx;
+    margin-left: 20rpx;
+    font-size: 32rpx;
+    line-height: 50rpx;
+    color: #000;
+}
+.nctouch-oredr-detail-block .order-state{
+  float: right;
+    height:50rpx;
+    margin-right: 25rpx;
+    font-size: 30rpx;
+    line-height: 50rpx;
+}
+
+.nctouch-oredr-detail-block .info {
+    margin-left: 20rpx;
+    font-size: 28rpx;
+    line-height: 45rpx;
+}
+.nctouch-oredr-detail-add{
+      position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.nctouch-oredr-detail-add .dl {
+    margin: 0 0 0 80rpx;
+    padding: 0 25rpx 0 0;
+    margin-left: 20rpx;
+    
+}
+
+.nctouch-oredr-detail-add .dt {
+    display: block;
+    height: 50rpx;
+    font-size: 30rpx;
+    line-height: 50rpx;
+}
+.dt text{
+  margin-left: 15rpx;
+    /* font-weight: 600; */
+    font-size: 28rpx
+}
+.nctouch-oredr-detail-add .dd{
+  display: block;
+    min-height: 45rpx;
+    max-height: 80rpx;
+    font-size: 30rpx;
+    line-height: 45rpx;
+}
+.nctouch-oredr-detail-block .msg{
+display: inline-block;
+    vertical-align: top;
+    width: 50rpx;
+    height: 50prx;
+    margin-right: 10rpx;
+    opacity: 0.9;
+}
+.nctouch-order-item{
+
+      width: 95%;
+    padding: 0 2.5%;
+    background-color: #FFF;
+}
+
+
+.nctouch-order-item-con .goods-block.detail{
+  height: 215rpx;
+}
+.nctouch-order-item-con .goods-block {
+    position: relative;
+    z-index: 1;
+    border-bottom: solid #EEE 2rpx;
+    overflow: hidden;
+}
+.nctouch-order-item-con .goods-block navigator{
+  display: block;
+    color: #111;
+}
+
+.goods-pic{
+  border: 1px solid #e4e4e4;
+      display: block;
+    width: 140rpx;
+    height: 140rpx;
+    position: absolute;
+    z-index: 1;
+    top: 19rpx;
+    left: 0;
+}
+
+.nctouch-order-item-con .goods-pic image {
+    width: 100%!important;
+    height: 100%!important;
+}
+
+.goods-info{
+      display: block;
+    height: 140rpx;
+    padding: 19rpx 0;
+    margin: 0 200rpx 0 155rpx;
+    position: relative;
+    z-index: 1;
+}
+.nctouch-order-item-con .goods-info .goods-name {
+    overflow: hidden;
+    height: 75rpx;
+    font-size: 30rpx;
+    line-height: 37.5rpx;
+    margin-bottom: 5rpx;
+    color: #333;
+}
+ .goods-info .goods-type {
+    overflow: hidden;
+    height: 60rpx;
+    font-size: 22.5rpx;
+    line-height: 30rpx;
+    color: #999;
+}
+.goods-subtotal{
+  display: block;
+    position: absolute;
+    z-index: 1;
+    top: 19rpx;
+    right: 0;
+    width: 170rpx;
+    text-align: right;
+    overflow: hidden;
+}
+.nctouch-order-item-con .goods-subtotal .goods-price {
+    display: block;
+    font-size: 27rpx;
+    line-height: 45rpx;
+    font-weight: 600;
+}
+.goods-num{
+  display: block;
+    font-size: 27rpx;
+    line-height: 45rpx;
+    color: #999;
+    font-weight: 600;
+}
+
+.nctouch-order-item-con .goods-subtotle {
+    padding: 20rpx 0;
+}
+
+.nctouch-order-item-con .goods-subtotle .dl {
+    font-size: 27rpx;
+    line-height: 45rpx;
+    overflow: hidden;
+    margin-bottom:5rpx;
+}
+.nctouch-order-item-con .goods-subtotle .dt {
+    float: left;
+    color: #555;
+}
+.nctouch-order-item-con .goods-subtotle .dd {
+    float: right;
+    color: #000;
+    text-align: right;
+}
+
+.nctouch-order-item-con .goods-subtotle .dd text {
+    display: block;
+    width: 400rpx;
+    height: 45rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 30rpx;
+    line-height: 45rpx;
+    color: #000;
+}
+.nctouch-order-item-con .goods-subtotle .dl.t {
+    font-size: 30rpx;
+    line-height: 50rpx;
+}
+.btns .btn{
+  margin: 0 auto 10px auto; 
+}
+.btns .btn:last-child{
+  margin-bottom: 0!important;
+}
+.btns{
+  padding: 40rpx 0;
+  background-color: #FFF;
+}
+.goods-return{
+      position: absolute;
+    z-index: 2;
+    right: 0rem;
+    bottom: 20rpx;
+    display: block;
+    font-size: 30rpx;
+    line-height: 60rpx;
+    height: 60rpx;
+    padding: 0 40rpx;
+    border: solid 2rpx #EEE;
+    border-radius: 10rpx;
+    color: #ED5564 !important;
+    background-color: #FFF;
+}
+
+.tiz{
+  font-size: 35rpx;
+    line-height: 100rpx;
+    color: #ED5564;
+    text-align: center;
+    margin-top: -20rpx;
+   
+}
+
+
+
+ .goods-gift {
+    display: block;
+    clear: both;
+    padding: 10rpx;
+    margin: 20rpx 0 0;
+    border: dashed 1px #fa4e51;
+    background-color: #FCFCFC;
+    overflow: hidden;
+}
+.tx_{
+  display: block;
+    font-size: 26rpx;
+    line-height: 45rpx;
+    /* height: 0.9rem; */
+   
+    
+    color: #888;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.zp{
+  display: inline-block;
+    height: 25rpx;
+    vertical-align: middle;
+    padding: 5rpx 10rpx;
+    margin-right: 10rpx;
+    background: #fa4e51;
+    float:left;
+    font-size: 23rpx;
+    line-height: 25rpx;
+    color: #FFF;
+    border-radius: 10rpx;
+}
+
+
+

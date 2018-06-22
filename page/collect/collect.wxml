@@ -1,0 +1,54 @@
+<view class='favorites_head'>
+    <view class='fav_item' bindtap='del_cur'>移除选择商品</view>
+    <view class='fav_item' bindtap='all_'>全选</view>
+</view>
+
+
+
+
+<view id='pro_select'>
+
+  <block wx:for="{{select_list}}">
+    <view class='sel_item {{item.chk==true? "del":""}}'  >
+      <navigator class='sel_container' url='../details/details?goods_id={{item.goods_id}}'>
+    
+        <view class='img_c' >
+          <image src='{{tp+"/"+item.goods_image}}' mode='widthFix' data-index="{{index}}" ></image>
+        </view>
+        <view class='des_in'>
+          <view class='des_pro'>
+            <text>{{item.goods_name}}</text>
+          </view>
+          <view class='pro_price'>
+            现价 :
+            <text>¥</text>{{item.promotion_price}}
+          </view>
+        </view>
+      </navigator>
+         <view class='fav_list_bottom'>
+            <view class='qx'  bindtap='cancel_collect' data-id="{{item.goods_id}}">取消关注</view>
+            <view class='add_cart' bindtap='sel_del' data-index='{{index}}' data-id="{{item.goods_id}}">选中商品</view>
+          </view>
+    </view>
+  </block>
+  
+</view>
+
+
+
+
+
+
+
+<view class='nctouch-norecord'  wx:if="{{is_kong}}">
+<view class='norecord-ico'>
+  <image src='../../images/favorite_w.png'></image>
+</view>
+<view class='cord_b'>
+    <view class='f_cord'>您还没有关注任何商品</view>
+    <view class='b_cord'>可以去看看哪些商品值得收藏</view>
+</view>
+
+<navigator url='../categroy/categroy' open-type="switchTab">随便逛逛</navigator>
+
+</view>

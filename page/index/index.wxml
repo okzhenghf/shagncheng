@@ -1,0 +1,112 @@
+ <!-- 引入模板 
+<import src="../../template/index.wxml"/> 
+
+
+<view wx:for="{{all_data}}" wx:key="{{index}}">  
+    <!-- 判断轮播图 -->
+  <!-- <template is="{{item.adv_list?'banner_m':''}}"   data="{{...item.adv_list}}" wx:if="{{item.adv_list}}"/> -->
+  
+      <!-- 模型A -->
+ <!-- <template is="{{item.home1?'home1':''}}"  data="{{...item.home1}}" wx:if="{{item.home1}}"/> -->
+       <!-- 模型B-->
+  <!-- <template is="{{item.home2?'home2':''}}"  data="{{...item.home2}}" wx:if="{{item.home2}}"/> -->
+     <!-- 模型C -->
+  <!-- <template is="{{item.home3?'home3':''}}"  data="{{...item.home3}}" wx:if="{{item.home3}}"/> -->
+   <!-- 商品板块 -->
+  <!-- <template is="{{item.goods?'goods':''}}"  data="{{...item.goods}}" wx:if="{{item.goods}}"/> -->
+
+  <!-- 限时商品模块 -->
+   <!-- <template is="{{item.goods1?'goods1':''}}"  data="{{...item.goods1}}" wx:if="{{item.goods1}}"/> -->
+
+   <!-- 限时商品模块 -->
+   <!-- <template is="{{item.goods2?'goods2':''}}"  data="{{...item.goods2,shi_data,feng_data,miao_data}}" wx:if="{{item.goods2}}"/> -->
+
+
+<!-- </view>   -->
+
+<!-- <view bindtap='qk'>清除</view>  -->
+
+
+
+  <swiper id='banner_swiper'autoplay="{{true}}"indicator-dots="{{true}}" interval="4000">
+    <swiper-item wx:for="{{banner_data}}">
+      <image src="{{tp+'/'+item.adv_image}}" mode="" />
+    </swiper-item>
+  </swiper>
+
+
+   
+
+ <view class='nctouch-home-block item-goods' id='item-goods'>
+  <view class='tit-bar'><text>限时抢购</text></view> 
+  <view id='Time_'>
+     活动截止时间:{{jz_data}}
+     
+    </view>
+<scroll-view scroll-x="{{true}}">
+  
+  <view class='sul goods-list'>
+    <view class='sli' wx:for='{{xs_data}}'>
+      <navigator url='../details/details?goods_id={{item.goods_id}}'>
+        <view class='goods-pic'>
+          <image src='{{tp+"/"+item.picture.pic_cover_big}}' mode='widthFix'></image>
+        </view>
+        <view class='sdl goods-info'>
+          <view class='sdt goods-name'>{{item.goods_name}}</view>
+          <view class='sdd goods-price'>￥<text>{{item.promotion_price}}</text>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  
+    
+  </view>
+</scroll-view >
+  
+</view> 
+
+
+
+
+<!-- 
+ <view class='nctouch-home-block item-goods'>
+   <view class='tit-bar'>{{title}}</view> 
+  <view class='sul goods-list'>
+    <view class='sli'>
+      <navigator url='../details/details?goods_id={{itemName.goods_id}}'>
+        <view class='goods-pic'>
+          <image src='http://192.168.0.8/upload/goods/20180429/f4beb606918d9baf3f3ab58eafc999e41.jpg' mode='widthFix'></image>
+        </view>
+        <view class='sdl goods-info'>
+          <view class='sdt goods-name'>华硕(ASUS) 飞行堡垒四代FX63VD 15.6英寸游戏笔记本电脑</view>
+          <view class='sdd goods-price'>￥
+            <text>3568.60</text>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>  -->
+<view class='group-box'>
+  <view class='mui-card group'>
+    <view class='mui-card-header title'>
+        <view class='pt-icon'>
+            <image src='../../images/tuangou-1_03.png'></image>
+            超值拼团
+        </view> 
+    </view>
+    <view class='mui-card-content'>
+      <navigator>
+        <image src='../../images/list_03.png' mode='widthFix'></image>      
+        </navigator>
+    </view>
+    <view class='mui-card-footer'>
+        <view class="i-price">
+					<text>￥29</text>
+				</view>
+        <text class='text_gn'>【买就送】但很快撒娇的哈萨凡是尽度jdhgkjkjjk讲啊</text>
+    
+    </view>
+  
+  </view>
+</view>
